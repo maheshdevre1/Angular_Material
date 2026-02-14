@@ -4,6 +4,7 @@ Que 1) Why Client-Side Frameworks Were Introduced?
 Que 2)  How Angular Application Works (Clear Explanation) ?
 Que 3) How Angular Expressions Are Different from JavaScript Expressions ?
 Que 4) What are Single Page Applications (SPA)?
+Que 5) What Are Templates in Angular?
 
 
 Que 1) Why Client-Side Frameworks Were Introduced?
@@ -151,5 +152,64 @@ Since the whole page is not reloaded again and again, SPAs feel faster and smoot
 Navigation between pages (like dashboard, profile, settings) happens instantly.
 6)Better Performance
 Only necessary data is fetched from the server, reducing load time and improving efficiency.
+
+Que 5)What Are Templates in Angular?
+A template in Angular is the HTML part of a component.
+It tells Angular:
+👉 What to show on the screen, 👉 How to display the data
+You can think of a template as the view (UI) of a component.
+🏦 Simple Example
+Suppose we have a Banking component.
+Component (Logic - TypeScript)
+export class AccountComponent {
+  balance = 50000;
+}
+Template (HTML - View)
+<h2>My Account</h2>
+<p>Balance: {{ balance }}</p>
+👉 {{ balance }} is an Angular expression.
+👉 Angular takes the value from the component and shows it in the browser.
+So:
+Component → Contains logic
+Template → Displays data
+✅ Two Ways to Create Template in Angular
+1️⃣ Inline Template
+The HTML is written directly inside the component file.
+Example:
+@Component({
+  selector: 'app-account',
+  template: `
+    <h2>My Account</h2>
+    <p>Balance: {{ balance }}</p>
+  `
+})
+export class AccountComponent {
+  balance = 50000;
+}
+📌 Here, HTML is written inside the template property using backticks ( ).
+✔ Used for small templates
+❌ Not good for large UI
+2️⃣ Linked Template (External Template)
+The HTML is written in a separate .html file.
+Example:
+account.component.ts
+@Component({
+  selector: 'app-account',
+  templateUrl: './account.component.html'
+})
+export class AccountComponent {
+  balance = 50000;
+}
+account.component.html
+<h2>My Account</h2>
+<p>Balance: {{ balance }}</p>
+✔ Cleaner and more professional
+✔ Better for large applications
+✔ Mostly used in real projects
+🔥 Simple Difference
+Inline Template	Linked Template
+HTML inside component file	HTML in separate file
+Used for small UI	Used for large UI
+Uses template property	Uses templateUrl property
 
 
