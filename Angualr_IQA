@@ -11,13 +11,15 @@ Ques 8) What is a Component?
 Que 9) What is @Component Decorator?
 Que 10) What is @Input() in Angular?
 Que 11) What is @Output() in Angular?
+Que 12) What is a Module in Angular? 
 
 
 
 Que 1) Why Client-Side Frameworks Were Introduced?
 -------------------------------------------------------
 1)To Manage Application Complexity
-Modern web applications like banking systems, e-commerce websites, and social media platforms became very complex. Managing large codebases with plain JavaScript became difficult and unorganized.
+Modern web applications like banking systems, e-commerce websites, and social media platforms became very complex. Managing large codebases with 
+plain JavaScript became difficult and unorganized.
 2)To Avoid Manual DOM Manipulation
 Earlier, developers had to manually update the UI using JavaScript. This made the code messy and hard to maintain. Frameworks automatically update the UI when data changes.
 3)To Support Single Page Applications (SPAs)
@@ -360,6 +362,19 @@ Used for property binding	Used for event binding
 👉 Input = Data comes IN
 👉 Output = Data goes OUT
 
+Que 12) What is a Module in Angular? 
+1️⃣ A module in Angular is a logical container that groups related components, directives, pipes, and services.
+2️⃣ It helps organize the application into cohesive blocks of functionality.
+3️⃣ Every Angular application has at least one root module called AppModule.
+4️⃣ Modules improve code maintainability and scalability in large applications.
+5️⃣ The @NgModule decorator is used to define a module.
+6️⃣ Important properties of @NgModule include:
+declarations – Components, directives, and pipes that belong to the module.
+imports – Other modules required by this module.
+providers – Services available for dependency injection.
+bootstrap – The root component that starts the application.
+7️⃣ Modules support feature-based development (e.g., AuthModule, AccountModule).
+8️⃣ They enable lazy loading, improving application performance.
 
 
 
