@@ -7,6 +7,7 @@ Que 4) What are Single Page Applications (SPA)?
 Que 5) What Are Templates in Angular?
 Que 6)  What is AOT (Ahead-of-Time) Compiler in Angular?
 Que 7) What is Just-In-Time (JIT) Compilation?
+Ques 8) What is a Component?
 
 
 Que 1) Why Client-Side Frameworks Were Introduced?
@@ -258,6 +259,19 @@ Since compilation happens in the browser, the app takes more time to load compar
 6️)Errors Appear at Runtime
 Template or code errors are detected while the application is running in the browser.
 👉 JIT is mainly used for development because it provides quick builds but is not recommended for production.
+
+Ques 8) What is a Component?
+-------------------------------
+1) A component is the basic building block of an Angular application.
+2) It controls a specific part of the user interface (UI).
+3) It contains:TypeScript file → Logic, HTML file → View (UI), CSS file → Styles
+4) Components make the application modular and reusable.
+Example: In a banking app:
+HeaderComponent
+LoginComponent
+DashboardComponent
+TransactionComponent
+5)Each part of the screen is built using components.
 
 
 
