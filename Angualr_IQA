@@ -6,6 +6,7 @@ Que 3) How Angular Expressions Are Different from JavaScript Expressions ?
 Que 4) What are Single Page Applications (SPA)?
 Que 5) What Are Templates in Angular?
 Que 6)  What is AOT (Ahead-of-Time) Compiler in Angular?
+Que 7) What is Just-In-Time (JIT) Compilation?
 
 
 Que 1) Why Client-Side Frameworks Were Introduced?
@@ -241,6 +242,22 @@ AOT removes unnecessary Angular compiler code from the final build.
 👉 This reduces file size.
 6️⃣ Better Security
 Templates are compiled earlier, so there is less risk of injection attacks.
+
+Ques 7) What is Just-In-Time (JIT) Compilation?
+------------------------------------------------
+1️)Compilation at Runtime
+JIT compiles the Angular application in the browser when the app loads.
+2️)Happens During Execution
+The Angular compiler runs just before the application starts, converting templates and TypeScript into JavaScript.
+3️)Used in Development Mode
+When we run ng serve, Angular uses JIT compilation by default.
+4️)Faster Development Builds
+It does not require a full build process, so changes reflect quickly during development.
+5️)Slower Initial Loading
+Since compilation happens in the browser, the app takes more time to load compared to AOT.
+6️)Errors Appear at Runtime
+Template or code errors are detected while the application is running in the browser.
+👉 JIT is mainly used for development because it provides quick builds but is not recommended for production.
 
 
 
