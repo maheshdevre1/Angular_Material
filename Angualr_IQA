@@ -9,6 +9,8 @@ Que 6)  What is AOT (Ahead-of-Time) Compiler in Angular?
 Que 7) What is Just-In-Time (JIT) Compilation?
 Ques 8) What is a Component?
 Que 9) What is @Component Decorator?
+Que 10) What is @Input() in Angular?
+
 
 
 Que 1) Why Client-Side Frameworks Were Introduced?
@@ -311,6 +313,23 @@ The decorator connects logic + HTML + CSS together.
 🔥 Simple Summary
 👉 Component = Controls a part of UI (logic + view + style).
 👉 @Component decorator = Tells Angular how to create and use that component.
+
+Ques 10) What is @Input() in Angular?
+----------------------------------------
+1️)@Input() is used to receive data from parent component to child component.
+2️)It allows the parent component to pass values to the child component.
+3️)Data flow direction:
+👉 Parent → Child
+🏦 Simple Example (Banking App)
+Parent Component (dashboard.component.html)
+<app-header [title]="'My Bank'" ></app-header>
+Here, parent is sending the value "My Bank" to child.
+Child Component (header.component.ts)
+@Input() title: string;
+Now the child can use:
+<h2>{{ title }}</h2>
+Output in browser:
+My Bank
 
 
 
