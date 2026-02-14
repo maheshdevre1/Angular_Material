@@ -1,2 +1,20 @@
 Angular Interview Question and Answer
 --------------------------------------
+Que 1) Why Client-Side Frameworks Were Introduced?
+
+
+Que 1) Why Client-Side Frameworks Were Introduced?
+1)To Manage Application Complexity
+Modern web applications like banking systems, e-commerce websites, and social media platforms became very complex. Managing large codebases with plain JavaScript became difficult and unorganized.
+2)To Avoid Manual DOM Manipulation
+Earlier, developers had to manually update the UI using JavaScript. This made the code messy and hard to maintain. Frameworks automatically update the UI when data changes.
+3)To Support Single Page Applications (SPAs)
+Frameworks like Angular and React allow applications to load once and update only necessary parts without reloading the entire page, improving speed and user experience.
+4)To Provide Component-Based Architecture
+Applications are divided into reusable components (e.g., navbar, dashboard, transaction list). This makes development faster and code easier to maintain.
+5)To Improve Developer Productivity
+Frameworks provide built-in features like routing, form validation, HTTP calls, and state management, reducing development time.
+6)To Enhance Performance
+Features like Virtual DOM (React) and data binding (Angular) improve performance and ensure smooth UI updates.
+7)To Enable Team Collaboration
+Structured architecture helps multiple developers work on the same project efficiently.
