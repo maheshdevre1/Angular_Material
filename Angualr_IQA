@@ -10,6 +10,7 @@ Que 7) What is Just-In-Time (JIT) Compilation?
 Ques 8) What is a Component?
 Que 9) What is @Component Decorator?
 Que 10) What is @Input() in Angular?
+Que 11) What is @Output() in Angular?
 
 
 
@@ -331,6 +332,33 @@ Now the child can use:
 Output in browser:
 My Bank
 
+Que 11) What is @Output() in Angular?
+--------------------------------------
+1️⃣ @Output() is used to send data from child component to parent component.
+2️⃣ It uses an EventEmitter to send events.
+3️⃣ Data flow direction:
+👉 Child → Parent
+🏦 Example
+Child Component (transfer.component.ts)
+@Output() transferDone = new EventEmitter<string>();
+sendData() {
+  this.transferDone.emit("Transfer Successful");
+}
+Parent Component (dashboard.component.html)
+<app-transfer (transferDone)="showMessage($event)"></app-transfer>
+Parent TypeScript
+showMessage(message: string) {
+  console.log(message);
+}
+Now when child emits event, parent receives it.
+🔥 Simple Difference
+@Input()	@Output()
+Parent → Child	Child → Parent
+Receives data	Sends data
+Used for property binding	Used for event binding
+🎯 Easy Memory Trick
+👉 Input = Data comes IN
+👉 Output = Data goes OUT
 
 
 
