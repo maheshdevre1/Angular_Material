@@ -12,6 +12,7 @@ Que 9) What is @Component Decorator?
 Que 10) What is @Input() in Angular?
 Que 11) What is @Output() in Angular?
 Que 12) What is a Module in Angular? 
+Que 13) What is Angular CLI?
 
 
 
@@ -363,6 +364,7 @@ Used for property binding	Used for event binding
 👉 Output = Data goes OUT
 
 Que 12) What is a Module in Angular? 
+-------------------------------------
 1️⃣ A module in Angular is a logical container that groups related components, directives, pipes, and services.
 2️⃣ It helps organize the application into cohesive blocks of functionality.
 3️⃣ Every Angular application has at least one root module called AppModule.
@@ -375,6 +377,26 @@ providers – Services available for dependency injection.
 bootstrap – The root component that starts the application.
 7️⃣ Modules support feature-based development (e.g., AuthModule, AccountModule).
 8️⃣ They enable lazy loading, improving application performance.
+
+Que 13) What is Angular CLI?
+1️⃣ Angular CLI (Command Line Interface) is a tool used to create, manage, and build Angular applications using simple commands.
+2️⃣ It helps developers automate common tasks like creating components, services, and modules.
+3️⃣ It reduces manual configuration and saves development time.
+4️⃣ It creates a proper project structure automatically when starting a new application.
+5️⃣ It supports development server, testing, building, and deployment.
+
+ng new my-app          // Creates a new Angular project with complete folder structure and configuration.
+ng serve               // Starts a development server and runs the application locally.
+ng generate component header  
+// Generates a new component named 'header' with required files (.ts, .html, .css, .spec.ts).
+ng generate service user  
+// Generates a new service file for handling business logic or API calls.
+ng build               // Builds the application and generates output files in the dist folder.
+ng build --prod        // Builds the application for production with optimization, AOT compilation, and minification.
+ng test                // Runs unit tests using Karma.
+ng lint                // Checks code quality and coding standards.
+ng version             // Displays Angular CLI and Angular framework version details.
+
 
 
 
