@@ -5,9 +5,11 @@ Que 2)  How Angular Application Works (Clear Explanation) ?
 Que 3) How Angular Expressions Are Different from JavaScript Expressions ?
 Que 4) What are Single Page Applications (SPA)?
 Que 5) What Are Templates in Angular?
+Que 6)  What is AOT (Ahead-of-Time) Compiler in Angular?
 
 
 Que 1) Why Client-Side Frameworks Were Introduced?
+-------------------------------------------------------
 1)To Manage Application Complexity
 Modern web applications like banking systems, e-commerce websites, and social media platforms became very complex. Managing large codebases with plain JavaScript became difficult and unorganized.
 2)To Avoid Manual DOM Manipulation
@@ -24,6 +26,7 @@ Features like Virtual DOM (React) and data binding (Angular) improve performance
 Structured architecture helps multiple developers work on the same project efficiently.
 
 Que 2) How Angular Application Works (Clear Explanation)
+----------------------------------------------------------
 1️)Browser Loads index.html
 When the user opens the website, the browser first loads the index.html file.
 This file contains a special tag: <app-root></app-root>
@@ -78,6 +81,7 @@ Only required components change
 User experience is smooth like a mobile app
 
 Que 3) How Angular Expressions Are Different from JavaScript Expressions ?
+--------------------------------------------------------------------------
 1)Where They Are Used
 🟢 Angular Expressions
 Used inside HTML templates
@@ -140,6 +144,7 @@ let total = amount - 1000;
 This is JavaScript expression.
 
 Que 4)What are Single Page Applications (SPA)?
+----------------------------------------------
 1)Loads Only Once
 A Single Page Application loads a single HTML page when the user first opens the website.
 2)No Full Page Reload
@@ -154,6 +159,7 @@ Navigation between pages (like dashboard, profile, settings) happens instantly.
 Only necessary data is fetched from the server, reducing load time and improving efficiency.
 
 Que 5)What Are Templates in Angular?
+-------------------------------------
 A template in Angular is the HTML part of a component.
 It tells Angular:
 👉 What to show on the screen, 👉 How to display the data
@@ -211,5 +217,32 @@ Inline Template	Linked Template
 HTML inside component file	HTML in separate file
 Used for small UI	Used for large UI
 Uses template property	Uses templateUrl property
+
+Que 6) : What is AOT (Ahead-of-Time) Compiler in Angular?
+----------------------------------------------------------
+1️⃣ Compiles Code Before Running the App
+AOT compiler converts Angular TypeScript and HTML templates into pure JavaScript during build time, before the app is loaded in the browser.
+2️⃣ Runs During Build Process
+When you run:
+ng build --prod
+Angular uses AOT to compile the application.
+3️⃣ Faster Application Loading
+Since the code is already compiled before reaching the browser, the browser does less work.
+👉 This makes the application load faster.
+4️⃣ Reduces Runtime Errors
+AOT checks templates and code during build time.
+If there is any mistake, it shows an error before deployment.
+Example:
+If you write wrong property name in template:
+{{ balnce }}
+It will give error during build.
+5️⃣ Smaller Bundle Size
+AOT removes unnecessary Angular compiler code from the final build.
+👉 This reduces file size.
+6️⃣ Better Security
+Templates are compiled earlier, so there is less risk of injection attacks.
+
+
+
 
 
