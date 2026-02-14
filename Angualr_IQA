@@ -1,7 +1,8 @@
 Angular Interview Question and Answer
 --------------------------------------
 Que 1) Why Client-Side Frameworks Were Introduced?
-Que 2 : How Angular Application Works (Clear Explanation) ?
+Que 2)  How Angular Application Works (Clear Explanation) ?
+Que 3) How Angular Expressions Are Different from JavaScript Expressions ?
 
 
 Que 1) Why Client-Side Frameworks Were Introduced?
@@ -73,3 +74,65 @@ After everything loads:
 Navigation happens without page reload
 Only required components change
 User experience is smooth like a mobile app
+
+Que 3 :How Angular Expressions Are Different from JavaScript Expressions ?
+1)Where They Are Used
+🟢 Angular Expressions
+Used inside HTML templates
+Written inside {{ }} (double curly braces)
+<p>{{ balance }}</p>
+👉 Used only in Angular template files (.html).
+🔵 JavaScript Expressions
+Used inside .js or .ts files
+Written inside functions or script tags
+let total = price * quantity;
+👉 Used in normal JavaScript code.
+2)Who Evaluates Them?
+JavaScript expressions are executed directly by the browser’s JavaScript engine.
+Angular expressions are evaluated by Angular framework inside the component.
+That means Angular controls and manages its expressions.
+3) Scope Difference
+🟢 Angular Expression
+Can access only:
+Component properties
+Component methods
+{{ userName }}
+If userName exists in component → it works.
+It cannot access global variables.
+🔵 JavaScript Expression
+Can access:
+Global variables
+Function variables
+Any declared variable
+4)Logic Allowed
+🟢 Angular Expressions (Limited)
+❌ No loops
+❌ No variable declaration
+❌ No assignments
+This will NOT work:
+{{ let x = 5 }}
+Angular expressions are simple and safe.
+🔵 JavaScript Expressions (Full Power)
+✅ Loops
+✅ Variable declarations
+✅ Assignments
+✅ Complex logic
+for(let i = 0; i < 5; i++) {}
+5)Security
+Angular expressions are:
+✅ Automatically protected from XSS attacks
+✅ Safer by default
+JavaScript:
+❌ Needs manual security handling
+6)Main Purpose
+Angular Expressions → Used for data binding (display data in UI).
+JavaScript Expressions → Used for full programming logic.
+🏦 Simple Banking Example
+In component:
+balance = 50000;
+In HTML:
+<p>Balance: {{ balance }}</p>
+This is Angular expression.
+But inside component:
+let total = amount - 1000;
+This is JavaScript expression.
