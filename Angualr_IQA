@@ -3,6 +3,7 @@ Angular Interview Question and Answer
 Que 1) Why Client-Side Frameworks Were Introduced?
 Que 2)  How Angular Application Works (Clear Explanation) ?
 Que 3) How Angular Expressions Are Different from JavaScript Expressions ?
+Que 4) What are Single Page Applications (SPA)?
 
 
 Que 1) Why Client-Side Frameworks Were Introduced?
@@ -21,7 +22,7 @@ Features like Virtual DOM (React) and data binding (Angular) improve performance
 7)To Enable Team Collaboration
 Structured architecture helps multiple developers work on the same project efficiently.
 
-Que 2 : How Angular Application Works (Clear Explanation)
+Que 2) How Angular Application Works (Clear Explanation)
 1️)Browser Loads index.html
 When the user opens the website, the browser first loads the index.html file.
 This file contains a special tag: <app-root></app-root>
@@ -75,7 +76,7 @@ Navigation happens without page reload
 Only required components change
 User experience is smooth like a mobile app
 
-Que 3 :How Angular Expressions Are Different from JavaScript Expressions ?
+Que 3) How Angular Expressions Are Different from JavaScript Expressions ?
 1)Where They Are Used
 🟢 Angular Expressions
 Used inside HTML templates
@@ -136,3 +137,19 @@ This is Angular expression.
 But inside component:
 let total = amount - 1000;
 This is JavaScript expression.
+
+Que 4)What are Single Page Applications (SPA)?
+1)Loads Only Once
+A Single Page Application loads a single HTML page when the user first opens the website.
+2)No Full Page Reload
+When the user clicks links or navigates, the page does not reload completely. Only the required content changes dynamically.
+3)Uses JavaScript for Updates
+JavaScript frameworks like Angular or React update the UI without refreshing the browser.
+4)Faster User Experience
+Since the whole page is not reloaded again and again, SPAs feel faster and smoother.
+5)Seamless Navigation
+Navigation between pages (like dashboard, profile, settings) happens instantly.
+6)Better Performance
+Only necessary data is fetched from the server, reducing load time and improving efficiency.
+
+
