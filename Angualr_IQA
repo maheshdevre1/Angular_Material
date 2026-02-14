@@ -8,6 +8,7 @@ Que 5) What Are Templates in Angular?
 Que 6)  What is AOT (Ahead-of-Time) Compiler in Angular?
 Que 7) What is Just-In-Time (JIT) Compilation?
 Ques 8) What is a Component?
+Que 9) What is @Component Decorator?
 
 
 Que 1) Why Client-Side Frameworks Were Introduced?
@@ -272,6 +273,45 @@ LoginComponent
 DashboardComponent
 TransactionComponent
 5)Each part of the screen is built using components.
+
+
+Que 9) What is @Component Decorator?
+-------------------------------------
+1)@Component is a decorator that tells Angular:
+👉 “This class is a component.”
+2) It provides metadata (configuration details) about the component.
+3)Important Properties of @Component
+✅ selector
+Defines the custom HTML tag used for the component.
+Example:
+selector: 'app-header'
+Used in HTML as:
+<app-header></app-header>
+✅ templateUrl
+Links the component to its HTML file (UI).
+templateUrl: './header.component.html'
+✅ styleUrls
+Links CSS file for styling the component.
+styleUrls: ['./header.component.css']
+✅ providers (Optional)
+Used to provide services for dependency injection.
+🔹 4️⃣ Example Explanation
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent {
+  @Input() title: string;
+  @Input() links: { name: string, url: string }[];
+}
+HeaderComponent controls the header section.
+@Input() allows parent component to send data.
+The decorator connects logic + HTML + CSS together.
+🔥 Simple Summary
+👉 Component = Controls a part of UI (logic + view + style).
+👉 @Component decorator = Tells Angular how to create and use that component.
+
 
 
 
