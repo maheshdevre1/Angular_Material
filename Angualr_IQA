@@ -1,6 +1,7 @@
 Angular Interview Question and Answer
 --------------------------------------
 Que 1) Why Client-Side Frameworks Were Introduced?
+Que 2 : How Angular Application Works (Clear Explanation) ?
 
 
 Que 1) Why Client-Side Frameworks Were Introduced?
@@ -18,3 +19,57 @@ Frameworks provide built-in features like routing, form validation, HTTP calls, 
 Features like Virtual DOM (React) and data binding (Angular) improve performance and ensure smooth UI updates.
 7)To Enable Team Collaboration
 Structured architecture helps multiple developers work on the same project efficiently.
+
+Que 2 : How Angular Application Works (Clear Explanation)
+1️)Browser Loads index.html
+When the user opens the website, the browser first loads the index.html file.
+This file contains a special tag: <app-root></app-root>
+This is just an empty placeholder. Angular will load the application inside this tag.
+2)main.ts Executes (Entry Point)
+After loading index.html, the browser runs the JavaScript files.
+main.ts is the starting point of the Angular application.
+It tells Angular: “Start the application using AppModule.”
+3)Angular Bootstraps AppModule
+Bootstrapping means starting the application.
+Angular loads the root module called AppModule.
+AppModule contains: All main components, Imported modules, Services configuration
+It acts like the main control center.
+4)AppComponent Loads
+Inside AppModule, Angular loads the AppComponent.
+AppComponent is the root component of the application.
+Its template replaces the <app-root> tag in index.html.
+Now the UI starts appearing on the screen.
+5)Router Checks the URL : Angular Router checks the current URL.
+Example: /login, /dashboard, /transfer
+Based on the URL, Angular loads the correct component without refreshing the page.
+This is why Angular apps are called Single Page Applications (SPA).
+6)Components Render the UI
+Each page is built using components.
+Example in a banking app: LoginComponent, DashboardComponent,TransactionComponent
+Each component has: TypeScript (logic),HTML (view), CSS (style)
+7️)Services Fetch Data
+Components do not directly call APIs.
+They use Services.
+Example: AccountService → fetch balance, TransactionService → fetch transactions
+Services handle business logic and API communication.
+Angular provides services using Dependency Injection (DI).
+8️)Data Binding Connects Logic and UI
+Data from the component is connected to HTML using data binding.
+Example:
+If balance = ₹50,000
+It automatically shows in UI.
+If balance changes → UI updates automatically.
+No manual DOM update needed.
+9️)Change Detection Updates DOM
+Angular continuously checks for data changes.
+If:
+User logs in
+Balance updates
+New transaction added
+Angular updates only the required part of the screen.
+This makes the application fast and efficient.
+10)Application Runs as SPA
+After everything loads:
+Navigation happens without page reload
+Only required components change
+User experience is smooth like a mobile app
