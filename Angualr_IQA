@@ -600,6 +600,32 @@ You do not need to refresh the page.
 Que 23) Interpolation in Angular (2+) ?
 Interpolation in Angular (2+) is a way to display component data inside HTML using double curly braces {{ }}.
 
+Que 24) What is a Directive in AngularJS?
+------------------------------------------
+A directive in AngularJS is a special instruction that extends HTML by adding new behavior to elements.
+It helps in data binding, DOM manipulation, event handling, and creating dynamic content.
+Directives usually start with ng- (like ng-model, ng-repeat, ng-if).
+✅ Types of Directives in AngularJS (With Examples)
+There are 4 types of directives:
+1️⃣ Element Directive
+Used as a new HTML element.
+<my-directive></my-directive>
+Here, my-directive is used like an HTML tag.
+2️⃣ Attribute Directive
+Used as an attribute inside an HTML tag.
+👉 This is the most commonly used type.
+<input type="text" ng-model="name">
+Here, ng-model binds input value to a variable.
+3️⃣ CSS Class Directive
+Used as a CSS class name.
+<div class="my-directive"></div>
+AngularJS activates the directive when the class name matches.
+4️⃣ Comment Directive
+Used inside an HTML comment.
+<!-- directive: my-directive -->
+AngularJS reads the directive from the comment.
+
+
 
 
 
