@@ -35,7 +35,8 @@ Que 32) What is Route Guard?
 Que 33) What is scope in Angular?
 Que 34) What type of DOM is used in Angular ?
 Que 35) In how many ways can Bootstrap be embedded in Angular?
-Que 36) How can you pass data between components in Angular?
+Que 36) How can you pass data between components in Angular ?
+Que 37) Explain Lazy Loading in Angular ?
 
 
 
@@ -866,6 +867,26 @@ Route parameters
 Query parameters
 Router state
 
+Que 37) Explain Lazy Loading in Angular ?
+------------------------------------------
+1️⃣ What is Lazy Loading?
+Lazy loading means loading modules only when they are needed.
+Angular does not load the entire application at once.
+It loads some parts later, when the user visits that page.
+2️⃣ Why is Lazy Loading Used?
+To reduce initial loading time.
+To improve application performance.
+To make the app faster at startup.
+3️⃣ How Does It Work?
+We divide the application into feature modules.
+These modules are loaded only when a user navigates to that route.
+It is configured in the routing module using loadChildren.
+4️⃣ Real-Time Example
+Suppose your app has:
+Home Page, Login Page, Admin Dashboard
+When the app starts:
+Only Home and basic modules are loaded.
+Admin Dashboard loads only when user clicks on Admin.
 
 
 
