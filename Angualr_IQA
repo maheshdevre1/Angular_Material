@@ -14,6 +14,7 @@ Que 11) What is @Output() in Angular?
 Que 12) What is a Module in Angular? 
 Que 13) What is Angular CLI?
 Que 14) What is a directive in Angular?
+Que 15) What is a Service in Angular?
 
 
 
@@ -416,6 +417,16 @@ Example 2 – Attribute Directive (ngStyle)
 🎯 Very Short Version (If interviewer wants quick answer)
 A directive in Angular is used to modify the structure or behavior of DOM elements. Examples include *ngIf for conditional rendering and ngStyle for styling elements
 dynamically.
+
+Que 15) What is a Service in Angular?
+1️⃣ A service is a class in Angular.
+2️⃣ It is used to write reusable logic.
+3️⃣ It helps to share data or functionality between multiple components.
+4️⃣ It is commonly used for:
+>Fetching data from API
+>Business logic
+>Storing common methods
+5️⃣ Services are injected into components using Dependency Injection.
 
 
 
