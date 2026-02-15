@@ -37,6 +37,7 @@ Que 34) What type of DOM is used in Angular ?
 Que 35) In how many ways can Bootstrap be embedded in Angular?
 Que 36) How can you pass data between components in Angular ?
 Que 37) Explain Lazy Loading in Angular ?
+Que 38) What is MVVM Architecture in Angular ?
 
 
 
@@ -887,6 +888,38 @@ Home Page, Login Page, Admin Dashboard
 When the app starts:
 Only Home and basic modules are loaded.
 Admin Dashboard loads only when user clicks on Admin.
+
+Que 38) What is MVVM Architecture in Angular?
+----------------------------------------------
+1️⃣ What is MVVM?
+MVVM stands for Model – View – ViewModel.
+It is a design pattern used to separate UI and business logic.
+It helps keep the code clean and organized.
+🔹 1. Model
+Model represents the data and business logic.
+It handles data from:
+API
+Database
+Services
+In Angular, services and interfaces usually act as the Model.
+👉 Example: A service that fetches user data from an API.
+🔹 2. View
+View represents the User Interface (UI).
+It includes:HTML,CSS,Buttons,Forms
+In Angular, the component template (.html file) is the View.
+👉 Example: A form where the user enters their name.
+🔹 3. ViewModel
+ViewModel connects the Model and View.
+In Angular, the Component (.ts file) acts as the ViewModel.
+It contains: Variables,Functions,Logic
+It controls what data is shown in the View.
+🔄 How Data Works in MVVM (Angular)
+The Model provides data.
+The Component (ViewModel) processes it.
+The View displays it.
+With two-way data binding (ngModel):
+If data changes in UI → it updates in component.
+
 
 
 
