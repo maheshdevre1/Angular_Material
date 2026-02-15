@@ -35,6 +35,7 @@ Que 32) What is Route Guard?
 Que 33) What is scope in Angular?
 Que 34) What type of DOM is used in Angular ?
 Que 35) In how many ways can Bootstrap be embedded in Angular?
+Que 36) How can you pass data between components in Angular?
 
 
 
@@ -838,7 +839,32 @@ Is quick and simple.
 Does not require installation.
 But is not preferred for production because it depends on an external network.
 
-
+Que 36) How can you pass data between components in Angular?
+-------------------------------------------------------------
+In Angular, data can be passed between components in three main ways:
+1️⃣ Parent to Child – Using @Input()
+The @Input() decorator is used to pass data from parent component to child component.
+The parent sends data using property binding.
+The child receives data using @Input().
+✅ Example:
+Parent HTML:
+<app-child [message]="parentMessage"></app-child>
+Child Component:
+@Input() message: string;
+👉 Used when data flows one-way (parent → child).
+2️⃣ Child to Parent – Using @Output() and EventEmitter
+The @Output() decorator is used to send data from child to parent.
+It works with EventEmitter.
+✅ Used when child needs to send events or data back to parent.
+3️⃣ Using Service (For Unrelated Components)
+When components are not directly related (not parent-child),
+We use a shared service with observables (like Subject or BehaviorSubject) to share data.
+👉 This is commonly used in large applications.
+4️⃣ Using Router State / Route Parameters
+Data can also be passed while navigating using:
+Route parameters
+Query parameters
+Router state
 
 
 
