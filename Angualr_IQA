@@ -26,6 +26,7 @@ Que 23) Interpolation in Angular (2+) ?
 Que 24) What is a Directive in AngularJS?
 Que 25) What is Factory in AngularJS?
 Que 26) What is Digest Cycle in AngularJS?
+Que 27) What is Dependency Injection in Angular?
 
 
 
@@ -668,6 +669,25 @@ HTTP request
 Timeout
 4️⃣ It uses watchers to detect changes.
 5️⃣ It can be manually triggered using $apply().
+
+Que 27) What is Dependency Injection in Angular?
+-------------------------------------------------
+Dependency Injection means:
+👉 Instead of creating an object inside a class,
+👉 Angular automatically provides (injects) it from outside.
+If a component needs a service,
+Angular gives that service automatically.
+You do not need to create it using new.
+✅ Why We Use Dependency Injection?
+1️⃣ To reuse code
+2️⃣ To reduce tight coupling
+3️⃣ To make testing easy
+4️⃣ To manage services easily
+✅ Important Points (Simple)
+1️⃣ Angular has a built-in DI system.
+2️⃣ Services are injected through the constructor.
+3️⃣ We use @Injectable() for services.
+4️⃣ Angular creates and manages the object for us.
 
 
 
