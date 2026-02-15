@@ -19,7 +19,8 @@ Que 16) Explain Two-Way Data Binding in Angular ?
 Que 17) Explain One-Way Data Binding in Angular ?
 Que 18) What is data binding in Angular JS ?
 Que 19) What are Angular Lifecycle Hooks?
-Que 20) What is Angular?
+Que 20) What is Angular ?
+Que 21) What is Angular JS ?
 
 
 
@@ -549,6 +550,23 @@ Designed with mobile-first approach.
 Works well for modern web apps.
 5) Uses RxJS & Observables
 Used for handling API calls and asynchronous data.
+
+Que 21) What is Angular JS ?
+------------------------------
+AngularJS is the older version of Angular, released in 2010.
+It was also developed by Google but is now outdated.
+🔹 Main Features of AngularJS
+1) MVC Architecture Model → Data, View → HTML, Controller → Logic
+2)Uses JavaScript
+No TypeScript support.
+Pure JavaScript framework.
+3) Two-Way Data Binding
+Uses $scope and watchers.
+Automatically updates UI when data changes.
+4) Slower Performance
+Uses runtime (dynamic) compilation.
+More watchers → slower for large apps.
+5) Limited Mobile Support
 
 
 
