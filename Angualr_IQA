@@ -29,6 +29,9 @@ Que 26) What is Digest Cycle in AngularJS?
 Que 27) What is Dependency Injection in Angular?
 Que 28)  How do you create services in Angular ?
 Que 29) What is Angular Router?
+Que 30) What is routerLink?
+Que 31) What is ActivatedRoute?
+Que 32) What is Route Guard?
 
 
 
@@ -730,6 +733,56 @@ Angular Router is a module that enables navigation between different components 
 3️⃣ URL changes but page does not reload.
 4️⃣ Routes are defined in app-routing.module.ts.
 5️⃣ Uses <router-outlet> to display components.
+
+Que 30) What is routerLink?
+----------------------------
+routerLink is used to navigate from one page to another in Angular.
+It works like a link but without page reload.
+<a routerLink="/home">Home</a>
+<a routerLink="/about">About</a>
+👉 When you click → Angular loads the component
+👉 URL changes
+👉 No refresh happens
+
+Que 31) What is ActivatedRoute?
+-------------------------------
+ActivatedRoute is used to get data from the URL.
+Example: If URL has ID → /user/5
+We can read 5 using ActivatedRoute.
+✅ Example Route:
+{ path: 'user/:id', component: UserComponent }
+✅ In Component:
+import { ActivatedRoute } from '@angular/router';
+constructor(private route: ActivatedRoute) {}
+ngOnInit() {
+  const id = this.route.snapshot.paramMap.get('id');
+  console.log(id);
+}
+👉 If URL is /user/10
+👉 Output will be 10
+🎯 Interview Line:
+ActivatedRoute is used to access route parameters, query parameters, and URL data in Angular.
+
+Que 32) What is Route Guard?
+------------------------------
+Route Guard is used to control access to routes.
+Only logged-in users can open dashboard.
+If not logged in → redirect to login page.
+import { CanActivate } from '@angular/router';
+export class AuthGuard implements CanActivate {
+  canActivate(): boolean {
+    return false; // block route
+  }
+}
+Add in Routing:
+{ 
+  path: 'dashboard', 
+  component: DashboardComponent,
+  canActivate: [AuthGuard]
+}
+👉 If true → page opens
+👉 If false → page blocked
+Route Guard is used to protect routes and restrict access based on conditions like authentication.
 
 
 
