@@ -17,6 +17,7 @@ Que 14) What is a directive in Angular?
 Que 15) What is a Service in Angular?
 Que 16) Explain Two-Way Data Binding in Angular ?
 Que 17) Explain One-Way Data Binding in Angular ?
+Que 18) What is data binding in Angular JS ?
 
 
 
@@ -475,6 +476,30 @@ showMessage() {
 What Happens?
 When button is clicked → method runs in component.
 ✔ Data flows: View ➝ Component
+
+Que 18) What is data binding in Angular JS ?
+--------------------------------------------
+Data Binding in AngularJS is a feature that connects the model and the view, so changes in one automatically update the other in 
+real-time.
+1️⃣ Model = Data in JavaScript
+2️⃣ View = HTML page
+3️⃣ Data Binding connects both
+4️⃣ If user changes input → data updates
+5️⃣ If data changes → view updates
+So it works almost in real-time.
+✅ Simple Example (AngularJS)
+HTML
+<div ng-app="">
+  <input type="text" ng-model="name">
+  <p>Hello {{name}}</p>
+</div>
+🔍 What Happens?
+User types: Mahesh
+Paragraph automatically shows:
+👉 Hello Mahesh
+If user types Rahul, it instantly updates to:
+👉 Hello Rahul
+No page refresh needed.
 
 
 
