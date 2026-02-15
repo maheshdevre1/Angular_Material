@@ -27,6 +27,7 @@ Que 24) What is a Directive in AngularJS?
 Que 25) What is Factory in AngularJS?
 Que 26) What is Digest Cycle in AngularJS?
 Que 27) What is Dependency Injection in Angular?
+Que 28)  How do you create services in Angular ?
 
 
 
@@ -688,6 +689,29 @@ You do not need to create it using new.
 2️⃣ Services are injected through the constructor.
 3️⃣ We use @Injectable() for services.
 4️⃣ Angular creates and manages the object for us.
+
+Que 28)  How do you create services in Angular ?
+-------------------------------------------------
+A service in Angular can be created using Angular CLI with ng generate service service-name or manually by creating a
+ class with the @Injectable() decorator. Services are used to share business logic or fetch data using HttpClient.
+Here is the short syntax to create a service in Angular 👇
+✅ Using CLI
+ng g s data
+✅ Service File (data.service.ts)
+import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+  getData() {
+    return "Hello";
+  }
+}
+✅ Using Service in Component
+constructor(private dataService: DataService) {}
+ngOnInit() {
+  console.log(this.dataService.getData());
+}
 
 
 
