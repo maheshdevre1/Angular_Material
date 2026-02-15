@@ -501,6 +501,35 @@ If user types Rahul, it instantly updates to:
 👉 Hello Rahul
 No page refresh needed.
 
+Que 18) What are Angular Lifecycle Hooks?
+------------------------------------------
+Angular lifecycle hooks are special methods that allow us to run code at different stages of a component’s life, such as initialization (ngOnInit), data change (ngOnChanges), and destruction (ngOnDestroy).
+a component also has stages:
+Create → Update → Destroy
+Angular gives us hooks (methods) to run code at these stages.
+🔹 Important Lifecycle Hooks (Simple)
+1️⃣ ngOnInit()
+✔ Runs once
+✔ Called when component is created
+✔ Used to load data (API call, initialization)
+ngOnInit() {
+  console.log("Component Initialized");
+} 👉 Runs when component loads.
+2️⃣ ngOnChanges()
+✔ Runs when input property changes
+✔ Used when parent sends data to child component
+ngOnChanges() {
+  console.log("Input value changed");
+} 👉 Runs whenever input data changes.
+3️⃣ ngOnDestroy()
+✔ Runs before component is removed
+✔ Used to clean memory (unsubscribe, clear timer)
+ngOnDestroy() {
+  console.log("Component Destroyed");
+}
+👉 Runs when component is removed from screen.
+
+
 
 
 
