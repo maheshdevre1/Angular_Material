@@ -25,6 +25,7 @@ Que 22) What is String Interpolation in AngularJS?
 Que 23) Interpolation in Angular (2+) ?
 Que 24) What is a Directive in AngularJS?
 Que 25) What is Factory in AngularJS?
+Que 26) What is Digest Cycle in AngularJS?
 
 
 
@@ -647,6 +648,26 @@ Service
 Directive
 Filter
 5️⃣ Factory returns a single shared instance (same object is used everywhere).
+
+Que 26) What is Digest Cycle in AngularJS?
+------------------------------------------------
+The digest cycle is the process AngularJS uses to:
+👉 Check if data (model) has changed
+👉 Update the view (HTML) if needed
+It keeps model and view synchronized.
+When something changes in your app (like button click or input change),
+AngularJS checks all variables and updates the screen automatically.
+That checking process is called Digest Cycle.
+✅ Important Points (Simple)
+1️⃣ It checks $scope variables for changes.
+2️⃣ If value changes → HTML updates automatically.
+3️⃣ It runs after:
+Button click (ng-click)
+Input change (ng-model)
+HTTP request
+Timeout
+4️⃣ It uses watchers to detect changes.
+5️⃣ It can be manually triggered using $apply().
 
 
 
