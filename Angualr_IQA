@@ -34,6 +34,7 @@ Que 31) What is ActivatedRoute?
 Que 32) What is Route Guard?
 Que 33) What is scope in Angular?
 Que 34) What type of DOM is used in Angular ?
+Que 35) In how many ways can Bootstrap be embedded in Angular?
 
 
 
@@ -815,6 +816,27 @@ It keeps styles and behavior of one component separate from others.
 This prevents CSS conflicts between components.
 👉 Example:
 If two components use the same CSS class name, they will not affect each other when Shadow DOM is used.
+
+Que 35) In how many ways can Bootstrap be embedded in Angular?
+-------------------------------------------------------------
+Bootstrap can be embedded in Angular in two main ways:
+1️⃣ Using NPM (Recommended Method)
+Install Bootstrap using npm:
+npm install bootstrap
+Then add Bootstrap CSS (and JS if needed) in the angular.json file under:
+"styles" array
+"scripts" array
+✅ This is the recommended approach because:
+It is easy to manage.
+It works well with Angular CLI.
+It keeps project dependencies organized.
+2️⃣ Using CDN (Content Delivery Network)
+Instead of installing locally, we can directly add Bootstrap links in the index.html file.
+Add Bootstrap CSS and JS links inside <head> or before closing <body>.
+✅ This method:
+Is quick and simple.
+Does not require installation.
+But is not preferred for production because it depends on an external network.
 
 
 
