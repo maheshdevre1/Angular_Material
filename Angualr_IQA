@@ -33,6 +33,7 @@ Que 30) What is routerLink?
 Que 31) What is ActivatedRoute?
 Que 32) What is Route Guard?
 Que 33) What is scope in Angular?
+Que 34) What type of DOM is used in Angular ?
 
 
 
@@ -794,6 +795,26 @@ In Angular, scope refers to the environment or context in which variables, expre
 determines the visibility and accessibility of these variables within different parts of the application, particularly 
 in relation to the component's template and controller.
 Note: In Angular 2+ (modern Angular), the term scope is no longer used. It is replaced by component state and data binding.
+
+Que 34) What type of DOM is used in Angular ?
+------------------------------------------------
+1️⃣ Real DOM
+Angular works with the Real DOM (the actual HTML structure in the browser).
+When data changes, Angular updates the DOM.
+But it does not refresh the full page like traditional websites.
+2️⃣ Change Detection
+Angular uses a Change Detection mechanism.
+It checks what data has changed.
+Then it updates only that specific part of the page.
+This makes the application fast and efficient.
+👉 Example:
+If you change only the username, Angular updates only the username part, not the entire page.
+3️⃣ Shadow DOM (Optional Feature)
+Angular can use Shadow DOM for component style isolation.
+It keeps styles and behavior of one component separate from others.
+This prevents CSS conflicts between components.
+👉 Example:
+If two components use the same CSS class name, they will not affect each other when Shadow DOM is used.
 
 
 
