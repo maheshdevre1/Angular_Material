@@ -21,6 +21,7 @@ Que 18) What is data binding in Angular JS ?
 Que 19) What are Angular Lifecycle Hooks?
 Que 20) What is Angular ?
 Que 21) What is Angular JS ?
+Que 22) What is String Interpolation in AngularJS?
 
 
 
@@ -567,6 +568,33 @@ Automatically updates UI when data changes.
 Uses runtime (dynamic) compilation.
 More watchers → slower for large apps.
 5) Limited Mobile Support
+
+Que 22) What is String Interpolation in AngularJS?
+-----------------------------------------------------
+String interpolation in AngularJS is a way to display dynamic data in HTML using double curly braces {{ }}.
+👉 Showing a JavaScript variable value inside HTML
+👉 Using double curly braces {{ }}
+🔹 Simple Meaning
+If you have some data in JavaScript (model)
+and you want to display it in HTML (view),
+you use:
+{{ variableName }}
+
+<div>{{ message }}</div>
+$scope.message = "Hello Mahesh";
+🔹 What happens?
+AngularJS takes value from $scope.message
+Puts it inside {{ }}
+Displays it in HTML
+🔹 Output on Screen:
+Hello Mahesh
+🔁 Why is it useful?
+If the value of message changes:
+$scope.message = "Welcome!";
+The HTML automatically updates to:
+Welcome!
+You do not need to refresh the page.
+
 
 
 
