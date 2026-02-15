@@ -28,6 +28,7 @@ Que 25) What is Factory in AngularJS?
 Que 26) What is Digest Cycle in AngularJS?
 Que 27) What is Dependency Injection in Angular?
 Que 28)  How do you create services in Angular ?
+Que 29) What is Angular Router?
 
 
 
@@ -711,7 +712,27 @@ export class DataService {
 constructor(private dataService: DataService) {}
 ngOnInit() {
   console.log(this.dataService.getData());
+
 }
+
+Que 29) What is Angular Router?
+-------------------------------
+Angular Router is used to move between different pages (components) in a single-page application (SPA) without reloading the page.
+Angular Router is a module that enables navigation between different components in a single-page application. It updates the URL and loads components dynamically without reloading the page.
+✅ Simple Meaning
+👉 It helps switch from one page to another.
+👉 It changes the URL.
+👉 It loads the correct component.
+👉 No full page refresh happens.
+✅ Important Points (Simple)
+1️⃣ Used in Single Page Applications (SPA).
+2️⃣ Helps navigate between components.
+3️⃣ URL changes but page does not reload.
+4️⃣ Routes are defined in app-routing.module.ts.
+5️⃣ Uses <router-outlet> to display components.
+
+
+
 
 
 
