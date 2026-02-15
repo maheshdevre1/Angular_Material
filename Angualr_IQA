@@ -24,6 +24,7 @@ Que 21) What is Angular JS ?
 Que 22) What is String Interpolation in AngularJS?
 Que 23) Interpolation in Angular (2+) ?
 Que 24) What is a Directive in AngularJS?
+Que 25) What is Factory in AngularJS?
 
 
 
@@ -625,6 +626,28 @@ AngularJS activates the directive when the class name matches.
 Used inside an HTML comment.
 <!-- directive: my-directive -->
 AngularJS reads the directive from the comment.
+
+Que 25) What is Factory in AngularJS?
+-------------------------------------
+A Factory in AngularJS is used to create and return an object or function.
+It is mainly used to write reusable business logic.
+✅ Why We Use Factory?
+To share data between controllers
+To write reusable code
+To separate business logic from controller
+✅ Simple Definition (Interview)
+A factory in AngularJS is a function that returns an object or function, which can be reused and injected into controllers, services, or directives.
+✅ Important Points (Very Simple)
+1️⃣ Factory is a function.
+2️⃣ It returns an object or function.
+3️⃣ It helps to create reusable code.
+4️⃣ It can be injected into:
+Controller
+Service
+Directive
+Filter
+5️⃣ Factory returns a single shared instance (same object is used everywhere).
+
 
 
 
