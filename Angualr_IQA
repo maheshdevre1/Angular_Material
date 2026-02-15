@@ -32,6 +32,7 @@ Que 29) What is Angular Router?
 Que 30) What is routerLink?
 Que 31) What is ActivatedRoute?
 Que 32) What is Route Guard?
+Que 33) What is scope in Angular?
 
 
 
@@ -518,7 +519,8 @@ No page refresh needed.
 
 Que 19) What are Angular Lifecycle Hooks?
 ------------------------------------------
-Angular lifecycle hooks are special methods that allow us to run code at different stages of a component’s life, such as initialization (ngOnInit), data change (ngOnChanges), and destruction (ngOnDestroy).
+Angular lifecycle hooks are special methods that allow us to run code at different stages of a component’s life, such as 
+initialization (ngOnInit), data change (ngOnChanges), and destruction (ngOnDestroy).
 a component also has stages:
 Create → Update → Destroy
 Angular gives us hooks (methods) to run code at these stages.
@@ -643,7 +645,8 @@ To share data between controllers
 To write reusable code
 To separate business logic from controller
 ✅ Simple Definition (Interview)
-A factory in AngularJS is a function that returns an object or function, which can be reused and injected into controllers, services, or directives.
+A factory in AngularJS is a function that returns an object or function, which can be reused and injected into controllers, 
+services, or directives.
 ✅ Important Points (Very Simple)
 1️⃣ Factory is a function.
 2️⃣ It returns an object or function.
@@ -721,7 +724,8 @@ ngOnInit() {
 Que 29) What is Angular Router?
 -------------------------------
 Angular Router is used to move between different pages (components) in a single-page application (SPA) without reloading the page.
-Angular Router is a module that enables navigation between different components in a single-page application. It updates the URL and loads components dynamically without reloading the page.
+Angular Router is a module that enables navigation between different components in a single-page application. It updates the URL and 
+loads components dynamically without reloading the page.
 ✅ Simple Meaning
 👉 It helps switch from one page to another.
 👉 It changes the URL.
@@ -783,6 +787,13 @@ Add in Routing:
 👉 If true → page opens
 👉 If false → page blocked
 Route Guard is used to protect routes and restrict access based on conditions like authentication.
+
+Que 33) What is scope in Angular?
+----------------------------------
+In Angular, scope refers to the environment or context in which variables, expressions, and functions are evaluated. It
+determines the visibility and accessibility of these variables within different parts of the application, particularly 
+in relation to the component's template and controller.
+Note: In Angular 2+ (modern Angular), the term scope is no longer used. It is replaced by component state and data binding.
 
 
 
