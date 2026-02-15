@@ -22,6 +22,8 @@ Que 19) What are Angular Lifecycle Hooks?
 Que 20) What is Angular ?
 Que 21) What is Angular JS ?
 Que 22) What is String Interpolation in AngularJS?
+Que 23) Interpolation in Angular (2+) ?
+
 
 
 
@@ -594,6 +596,9 @@ $scope.message = "Welcome!";
 The HTML automatically updates to:
 Welcome!
 You do not need to refresh the page.
+
+Que 23) Interpolation in Angular (2+) ?
+Interpolation in Angular (2+) is a way to display component data inside HTML using double curly braces {{ }}.
 
 
 
