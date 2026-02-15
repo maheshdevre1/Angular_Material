@@ -440,6 +440,8 @@ Que 16) Explain Two-Way Data Binding in Angular ?
 Property Binding [ ]
 Event Binding ( )
 👉 That’s why it is written as banana in a box syntax → [(ngModel)]
+Two-way data binding in Angular keeps the component data and the view synchronized using [(ngModel)], so changes in one 
+automatically reflect in the other.
 
 
 
