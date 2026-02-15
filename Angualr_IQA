@@ -13,6 +13,7 @@ Que 10) What is @Input() in Angular?
 Que 11) What is @Output() in Angular?
 Que 12) What is a Module in Angular? 
 Que 13) What is Angular CLI?
+Que 14) What is a directive in Angular?
 
 
 
@@ -396,6 +397,25 @@ ng build --prod        // Builds the application for production with optimizatio
 ng test                // Runs unit tests using Karma.
 ng lint                // Checks code quality and coding standards.
 ng version             // Displays Angular CLI and Angular framework version details.
+
+Que 14) What is a directive in Angular?
+----------------------------------------
+A directive in Angular is a class that adds behavior or modifies the appearance of DOM elements.
+It allows developers to extend HTML functionality.
+Angular provides three types of directives:
+1)Component Directive – Has its own template.
+2)Structural Directive – Changes DOM structure (e.g., *ngIf, *ngFor).
+3)Attribute Directive – Changes appearance or behavior (e.g., ngClass, ngStyle).
+✅ Short Example
+Example 1 – Structural Directive (*ngIf)
+<p *ngIf="isLoggedIn">Welcome User</p>
+👉 Shows the paragraph only if isLoggedIn is true.
+Example 2 – Attribute Directive (ngStyle)
+<p [ngStyle]="{'color':'blue'}">Hello</p>
+👉 Changes text color to blue.
+🎯 Very Short Version (If interviewer wants quick answer)
+A directive in Angular is used to modify the structure or behavior of DOM elements. Examples include *ngIf for conditional rendering and ngStyle for styling elements
+dynamically.
 
 
 
