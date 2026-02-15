@@ -18,6 +18,7 @@ Que 15) What is a Service in Angular?
 Que 16) Explain Two-Way Data Binding in Angular ?
 Que 17) Explain One-Way Data Binding in Angular ?
 Que 18) What is data binding in Angular JS ?
+Que 19) What are Angular Lifecycle Hooks?
 
 
 
@@ -501,7 +502,7 @@ If user types Rahul, it instantly updates to:
 👉 Hello Rahul
 No page refresh needed.
 
-Que 18) What are Angular Lifecycle Hooks?
+Que 19) What are Angular Lifecycle Hooks?
 ------------------------------------------
 Angular lifecycle hooks are special methods that allow us to run code at different stages of a component’s life, such as initialization (ngOnInit), data change (ngOnChanges), and destruction (ngOnDestroy).
 a component also has stages:
