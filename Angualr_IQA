@@ -43,6 +43,7 @@ Que 40) What is a Pipe in Angular?
 Que 41) What is Angular Universal?
 Que 42) How to Optimize Angular Applications?
 Que 43) What are Angular Interceptors?
+Que 44) What is NgZone in Angular?
 
 
 
@@ -1135,6 +1136,49 @@ Every person (request) must pass through the guard.
 Guard checks ID (token).
 Guard allows or blocks entry.
 Guard can also record entry details (logging).
+
+Que 44) What is NgZone in Angular?
+----------------------------------
+NgZone is a service that helps Angular know
+👉 “Something changed, update the screen!”
+Angular needs to know when to refresh the UI.
+NgZone helps Angular track async operations like:
+setTimeout(), setInterval(),HTTP requests,Button clicks, Promises
+🧠 Simple Meaning
+NgZone = Angular’s monitoring system
+It watches for background work.
+When that work finishes, it tells Angular:
+“Now update the view.”
+📌 Why Is It Needed?
+Angular updates the UI using change detection.
+But when async tasks run (like API calls), Angular must know when they finish.
+NgZone helps Angular detect that and refresh the screen.
+🎯 Example
+Suppose:
+setTimeout(() => {
+  this.message = "Hello";
+}, 2000);
+After 2 seconds:
+Value changes
+NgZone detects it
+Angular updates the UI automatically
+Without NgZone, the UI might not update properly.
+🔄 Real-Life Example
+Think of NgZone like a manager in an office 👨‍💼
+Employees (async tasks) are working.
+When work finishes, they inform the manager.
+Manager announces: “Update the display board!”
+NgZone = Manager
+Async task = Employee
+UI update = Display board update
+💡 Extra (Important)
+Sometimes we use:
+this.ngZone.runOutsideAngular()
+This tells Angular:
+👉 “Don’t check for changes for this task.”
+This improves performance for heavy operations.
+📝 In One Line
+NgZone helps Angular detect async changes and update the UI automatically.
 
 
 
