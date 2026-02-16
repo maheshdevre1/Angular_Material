@@ -40,6 +40,7 @@ Que 37) Explain Lazy Loading in Angular ?
 Que 38) What is MVVM Architecture in Angular ?
 Que 39) What are Angular Lifecycle Hooks?
 Que 40) What is a Pipe in Angular?
+Que 41) What is Angular Universal?
 
 
 
@@ -1005,6 +1006,44 @@ Formats number as money.
 4️⃣ Lowercase Pipe
 {{ name | lowercase }}
 Makes text small letters.
+
+Que 41) What is Angular Universal?
+------------------------------------
+Angular Universal is a way to run your Angular app on the server first, instead of only in the browser.
+Normally:
+Angular runs in the browser.
+The browser downloads JavaScript.
+Then the page loads.
+With Angular Universal:
+The server prepares the full HTML page first.
+Then sends it to the browser.
+So the page appears faster.
+🧠 Simple Meaning
+👉 Normal Angular → Browser builds the page.
+👉 Angular Universal → Server builds the page first.
+🚀 Why Do We Use It?
+1️⃣ Faster First Load
+User sees the page quickly.
+2️⃣ Better SEO
+Search engines (Google) can easily read the content.
+3️⃣ Better Performance
+Especially useful for:
+E-commerce websites
+Blogs
+News websites
+📌 Example
+Without Angular Universal:
+User opens website
+Blank screen for 2–3 seconds
+Then content appears
+With Angular Universal:
+User opens website
+Content appears immediately
+🔄 Real-Life Example
+Imagine ordering food:
+Normal Angular → Restaurant cooks after you arrive.
+Angular Universal → Food is already prepared when you arrive.
+So you get it faster 🍽️
 
 
 
