@@ -39,6 +39,7 @@ Que 36) How can you pass data between components in Angular ?
 Que 37) Explain Lazy Loading in Angular ?
 Que 38) What is MVVM Architecture in Angular ?
 Que 39) What are Angular Lifecycle Hooks?
+Que 40) What is a Pipe in Angular?
 
 
 
@@ -971,6 +972,39 @@ Used to unsubscribe observables.
 Used to clear timers.
 Simple meaning:
 "Component is about to be deleted. Clean up."
+
+Que 40) What is a Pipe in Angular?
+-----------------------------------
+A Pipe is used to change or format data before showing it on the screen.
+👉 It only changes how the data looks.
+👉 It does NOT change the original data.
+🎯 Simple Meaning
+A pipe is like a filter.
+It takes data → changes its format → shows the updated result in the HTML.
+🧠 Example
+Suppose you have:
+name = "mahesh";
+In HTML:
+{{ name | uppercase }}
+Output on screen:
+MAHESH
+But the original value is still:
+mahesh
+✔ Only display changed
+❌ Original data not changed
+📌 Built-in Pipes in Angular
+1️⃣ Uppercase Pipe
+{{ name | uppercase }}
+Makes text CAPITAL.
+2️⃣ Date Pipe
+{{ today | date }}
+Formats date nicely.
+3️⃣ Currency Pipe
+{{ price | currency }}
+Formats number as money.
+4️⃣ Lowercase Pipe
+{{ name | lowercase }}
+Makes text small letters.
 
 
 
