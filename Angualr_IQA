@@ -1103,6 +1103,39 @@ Works even without internet (PWA)
 Simple meaning:
 Save data locally for faster access.
 
+Que 43) What are Angular Interceptors?
+--------------------------------------
+Angular Interceptors are special services that sit between your app and the server.
+A central place to control all HTTP requests and responses.
+They can: Check,Modify, Or handle HTTP requests and responses
+before they reach the server or come back to your app.
+👉 Interceptor = Middle person between Angular and Backend.
+When you send a request:
+App → Interceptor → Server
+When response comes:
+Server → Interceptor → App
+🎯 Why Do We Use Interceptors?
+1️⃣ Add Authentication Token
+Automatically add JWT token to every request.
+Example:
+Authorization: Bearer token
+No need to add it manually every time.
+2️⃣ Handle Errors Globally
+If server returns error (like 401 or 500),
+you can handle it in one place.
+3️⃣ Logging
+Log all requests and responses.
+4️⃣ Show Loader
+Start loading spinner when request starts,
+stop when response comes.
+📌 Real-Life Example
+Think of an interceptor like a security guard at office gate:
+Every person (request) must pass through the guard.
+Guard checks ID (token).
+Guard allows or blocks entry.
+Guard can also record entry details (logging).
+
+
 
 
 
