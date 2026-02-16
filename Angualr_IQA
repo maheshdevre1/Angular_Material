@@ -45,6 +45,7 @@ Que 42) How to Optimize Angular Applications?
 Que 43) What are Angular Interceptors?
 Que 44) What is NgZone in Angular?
 Que 45) How Do You Implement Authentication in Angular?
+Que 46) What are Standalone Components in Angular 19?
 
 
 
@@ -1213,6 +1214,52 @@ Before opening a route:
 It checks → “Is user logged in?”
 If YES → Allow access
 If NO → Redirect to login page
+
+Que 46) What are Standalone Components in Angular 19?
+------------------------------------------------------
+Standalone Components are components that do not need NgModule.
+Earlier in Angular:
+Every component had to be declared inside an NgModule.
+Now in Angular 19:
+A component can work independently.
+No need to add it inside a module.
+🧠 Simple Meaning
+👉 Old way:
+Component → Must be inside NgModule
+👉 New way (Standalone):
+Component → Can work alone
+📌 How It Looks
+Instead of:
+@NgModule({
+  declarations: [MyComponent]
+})
+We write:
+@Component({
+  standalone: true,
+  imports: [CommonModule],
+})
+That’s it ✅
+No NgModule needed.
+🚀 Why Are Standalone Components Better?
+1️⃣ Less Complexity
+No need to manage many modules.
+2️⃣ Cleaner Code
+Less boilerplate code.
+3️⃣ Better Performance
+Improves tree-shaking (removes unused code).
+So final app size becomes smaller.
+4️⃣ Easy to Reuse
+You can directly import a standalone component anywhere.
+5️⃣ Easier Testing
+Since it works independently, testing becomes simple.
+🔄 Real-Life Example
+Think of it like:
+Old System 🏢
+Employee must belong to a department to work.
+Standalone System 👤
+Employee can work independently without department.
+More flexible ✔
+Less management ✔
 
 
 
