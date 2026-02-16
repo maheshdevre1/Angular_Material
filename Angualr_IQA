@@ -38,6 +38,7 @@ Que 35) In how many ways can Bootstrap be embedded in Angular?
 Que 36) How can you pass data between components in Angular ?
 Que 37) Explain Lazy Loading in Angular ?
 Que 38) What is MVVM Architecture in Angular ?
+Que 39) What are Angular Lifecycle Hooks?
 
 
 
@@ -919,6 +920,57 @@ The Component (ViewModel) processes it.
 The View displays it.
 With two-way data binding (ngModel):
 If data changes in UI → it updates in component.
+
+Que 39) What are Angular Lifecycle Hooks?
+--------------------------------------------
+Lifecycle hooks are special methods in Angular that run at different stages of a component’s life.
+Just like a human life has stages (birth → growth → work → death),
+a component also has stages (created → updated → destroyed).
+Angular gives us hooks to run code at these stages.
+📌 Main Lifecycle Hooks (In Simple Words)
+1️⃣ ngOnChanges()
+👉 Runs when input data changes.
+If a parent component sends new data to a child component, this method runs.
+Used to react to input changes.
+Simple meaning:
+"When input value changes, do something."
+2️⃣ ngOnInit()
+👉 Runs once after the component is created.
+Used to load data from API.
+Used to initialize variables.
+Simple meaning:
+"Component is ready. Start your work."
+3️⃣ ngDoCheck()
+👉 Runs every time Angular checks for changes.
+Used for custom change detection.
+Runs very frequently.
+Simple meaning:
+"Angular is checking for updates."
+4️⃣ ngAfterContentInit()
+👉 Runs once after external content is added.
+When content is passed using <ng-content>.
+Simple meaning:
+"External content is now added."
+5️⃣ ngAfterContentChecked()
+👉 Runs every time external content is checked.
+Simple meaning:
+"Angular checked the external content."
+6️⃣ ngAfterViewInit()
+👉 Runs once after component view is loaded.
+View = HTML template.
+Used when accessing DOM elements.
+Simple meaning:
+"HTML is loaded. You can access it now."
+7️⃣ ngAfterViewChecked()
+👉 Runs every time the view is checked.
+Simple meaning:
+"Angular checked the HTML again."
+8️⃣ ngOnDestroy()
+👉 Runs just before the component is removed.
+Used to unsubscribe observables.
+Used to clear timers.
+Simple meaning:
+"Component is about to be deleted. Clean up."
 
 
 
