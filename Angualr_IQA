@@ -44,6 +44,7 @@ Que 41) What is Angular Universal?
 Que 42) How to Optimize Angular Applications?
 Que 43) What are Angular Interceptors?
 Que 44) What is NgZone in Angular?
+Que 45) How Do You Implement Authentication in Angular?
 
 
 
@@ -1179,6 +1180,39 @@ This tells Angular:
 This improves performance for heavy operations.
 📝 In One Line
 NgZone helps Angular detect async changes and update the UI automatically.
+
+Que 45) How Do You Implement Authentication in Angular?
+--------------------------------------------------------
+Authentication means:
+👉 Checking if a user is logged in or not
+👉 Allowing access only to authorized users
+In Angular, we usually use:
+✅ JWT Token,✅ AuthGuard,✅ Interceptor
+🪜 Step-by-Step Simple Flow
+1️⃣ User Login
+User enters username & password.
+Angular sends data to backend.
+Backend verifies user.
+Backend sends back a JWT token.
+👉 Angular stores this token (usually in localStorage).
+2️⃣ Use Interceptor (Attach Token Automatically)
+Every time Angular sends a request:
+Interceptor adds the JWT token in headers.
+Example:
+Authorization: Bearer token
+So backend knows:
+✔ This user is valid.
+3️⃣ Protect Routes Using AuthGuard
+Now we don’t want everyone to access all pages.
+Example:
+Dashboard → Only logged-in users
+Admin page → Only admin users
+👉 We use AuthGuard.
+What AuthGuard Does?
+Before opening a route:
+It checks → “Is user logged in?”
+If YES → Allow access
+If NO → Redirect to login page
 
 
 
