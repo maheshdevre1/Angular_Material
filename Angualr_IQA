@@ -54,6 +54,7 @@ Que 51) Explain the use of Functional Components ?
 Que 52) What is Ivy in Angular?
 Que 53) Explain the purpose of Angular Elements ?
 Que 54) What is a Resolver in Angular?
+Que 55) What is the difference between Angular and React?
 
 
 
@@ -1554,6 +1555,39 @@ Wait for data
 Then load UserComponent
 📌 In One Line
 A Resolver loads required data before a page opens, so the user sees a fully loaded page instead of a loading screen.
+
+Que 55) What is the difference between Angular and React?
+-----------------------------------------------------------
+Both Angular and React are used to build web applications, but they are different in many ways.
+🔹 1. What they are
+Angular
+A complete framework
+Provides everything (routing, forms, HTTP, etc.) inside it
+React
+A library
+Mainly used for building UI (User Interface)
+You need extra libraries for routing, state management, etc.
+🔹 2. Developed By
+Angular → Developed by Google
+React → Developed by Facebook (Meta)
+🔹 3. Language Used
+Angular → Uses TypeScript (strongly typed)
+React → Uses JavaScript with JSX
+🔹 4. Architecture
+Angular → Follows MVC / MVVM pattern
+React → Purely Component-based architecture
+🔹 5. Best Used For
+Angular
+Large-scale applications
+Enterprise projects
+Complex business applications
+React
+Interactive UIs
+Single Page Applications (SPA)
+Fast and flexible frontend apps
+🔹 6. Learning Curve
+Angular → Slightly harder (more concepts)
+React → Easier to start
 
 
 
