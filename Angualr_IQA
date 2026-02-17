@@ -48,6 +48,7 @@ Que 45) How Do You Implement Authentication in Angular?
 Que 46) What are Standalone Components in Angular 19?
 Que 47) How do you use Typed Forms? 
 Que 48) What is the purpose of the Signal API? 
+Que 49) How does the inject() function work?
 
 
 
@@ -1336,6 +1337,35 @@ No manual change detection needed
 ✔ Reduce complex RxJS code
 ✔ Improve performance
 ✔ Make state management easier
+
+Que 49) How does the inject() function work?
+----------------------------------------------
+The inject() function in Angular is a new and easier way to get services (dependencies) without writing them inside the constructor.
+🧠 First, what is Dependency Injection (DI)?
+In Angular, when a component needs a service (like HttpClient or a custom service), we normally inject it using the constructor.
+Example (Old way):
+constructor(private userService: UserService) {}
+Angular automatically gives the service object.
+✅ What does inject() do?
+inject() lets you get the service without using the constructor.
+Example (New way):
+import { inject } from '@angular/core';
+userService = inject(UserService);
+That’s it!
+No constructor needed.
+🎯 Why is this useful?
+✔ Cleaner code
+✔ No need to write constructor just for injection
+✔ Useful in standalone components
+✔ Can be used inside functions, guards, interceptors, etc.
+📌 Simple Difference
+Old way:
+constructor(private service: MyService) {}
+New way:
+service = inject(MyService);
+Both do the same thing — but inject() makes it shorter and cleaner.
+📌 In One Line
+The inject() function allows you to get services directly without using constructor injection, making your Angular code simpler and cleaner.
 
 
 
