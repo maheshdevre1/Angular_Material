@@ -46,6 +46,7 @@ Que 43) What are Angular Interceptors?
 Que 44) What is NgZone in Angular?
 Que 45) How Do You Implement Authentication in Angular?
 Que 46) What are Standalone Components in Angular 19?
+Que 47) How do you use Typed Forms? 
 
 
 
@@ -1260,6 +1261,47 @@ Standalone System 👤
 Employee can work independently without department.
 More flexible ✔
 Less management ✔
+
+Que 47) How do you use Typed Forms? 
+----------------------------------------------------
+In Angular 19, Typed Forms make Reactive Forms safer and easier to use by adding proper data types.
+Earlier, form values were treated like any type (anything could go inside).
+Now, Angular lets you define exactly what type of data each form field should have — like string, number, or boolean.
+✅ What does that mean in simple words?
+Typed Forms help you:
+✔ Catch mistakes while writing code (before running the app)
+✔ Avoid runtime errors
+✔ Get better auto-suggestions in VS Code
+✔ Make large forms easier to manage
+🧠 Example (Without Typed Form)
+profileForm = new FormGroup({
+  name: new FormControl(''),
+  age: new FormControl(0)
+});
+Here, Angular does not strictly check types.
+🧠 Example (With Typed Form in Angular 19)
+profileForm = new FormGroup<{
+  name: FormControl<string>;
+  age: FormControl<number>;
+}>({
+  name: new FormControl(''),
+  age: new FormControl(0)
+});
+Now:
+name must always be a string
+age must always be a number
+If you try to assign wrong data, TypeScript will show an error immediately
+🎯 Why is this useful?
+Imagine a big form like:
+Registration form
+Banking form
+Loan application form
+Typed Forms:
+Prevent wrong data types
+Make your code cleaner
+Help other developers understand your form structure easily
+📌 In One Line
+Typed Forms in Angular 19 make reactive forms type-safe, safer, and easier to manage by defining exact data types for each form control.
 
 
 
