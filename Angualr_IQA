@@ -52,7 +52,7 @@ Que 49) How does the inject() function work?
 Que 50) What improvements have been made to standalone testing?
 Que 51) Explain the use of Functional Components ?
 Que 52) What is Ivy in Angular?
-
+Que 53) Explain the purpose of Angular Elements ?
 
 
 
@@ -1468,6 +1468,45 @@ Imagine you wrote 100 components, but you are using only 50.
 Result: Smaller and faster application.
 📌 In One Line
 Ivy is Angular’s modern rendering engine that makes applications faster, smaller, and easier to debug.
+
+Que 53) Explain the purpose of Angular Elements ?
+-------------------------------------------------
+Angular Elements allow you to convert an Angular component into a custom HTML element (web component).
+In simple words 👉
+You can use your Angular component like a normal HTML tag in any website or framework, even if it is not an Angular app.
+🧠 Why is this useful?
+Normally, Angular components work only inside Angular applications.
+With Angular Elements, you can:
+Use Angular components in React, Vue, or plain HTML
+Share components between different projects
+Reuse code easily
+✅ What are the main benefits?
+Web Component Integration
+Convert Angular components into custom HTML tags.
+Example:
+<my-user-card></my-user-card>
+Reusability
+Build once, use anywhere.
+Saves development time.
+Interoperability
+Works inside non-Angular applications.
+No need to rewrite the component.
+Encapsulation
+Component keeps its own:
+Logic
+HTML
+CSS
+Avoids style or code conflicts.
+🎯 Simple Real Example
+Imagine you built a Login Component in Angular.
+Using Angular Elements:
+You can use that same login component in:
+A React app
+A simple HTML website
+Another company project
+No need to rebuild it again.
+📌 In One Line
+Angular Elements let you turn Angular components into reusable custom HTML elements that can work in any application or framework.
 
 
 
