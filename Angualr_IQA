@@ -50,6 +50,7 @@ Que 47) How do you use Typed Forms?
 Que 48) What is the purpose of the Signal API? 
 Que 49) How does the inject() function work?
 Que 50) What improvements have been made to standalone testing?
+Que 51) Explain the use of Functional Components ?
 
 
 
@@ -1402,6 +1403,40 @@ TestBed.configureTestingModule({
 No declarations needed — much simpler.
 📌 In One Line
 Angular 19 makes standalone component testing simpler, faster, and cleaner by removing unnecessary module setup and reducing boilerplate code.
+
+Que 51) Explain the use of Functional Components ?
+--------------------------------------------------
+Functional Components in Angular are components that focus only on showing UI based on the data they receive.
+They do not use a class with complex logic.
+They are simple, clean, and mainly used for displaying content.
+🧠 What does that mean?
+Normally, Angular components use a class like this:
+@Component({...})
+export class MyComponent {
+  title = "Hello";
+}
+But functional components:
+Focus only on inputs (data coming in)
+Show output (UI)
+Avoid unnecessary logic
+Follow a more functional programming style
+✅ Why use Functional Components?
+✔ Simple and clean code
+✔ Easy to test
+✔ Better performance for small components
+✔ Good for reusable UI parts
+🎯 When should you use them?
+Use functional components when:
+You only need to display data
+There is no complex logic
+You are creating small reusable UI parts (like buttons, cards, labels)
+📌 Example in Simple Words
+Imagine a component that only shows a user name:
+Input → name
+Output → Display "Hello, Mahesh"
+It doesn’t need heavy logic — so a functional component is perfect.
+📌 In One Line
+Functional components are simple UI components that focus only on displaying data, making them clean, fast, and easy to test.
 
 
 
