@@ -47,6 +47,7 @@ Que 44) What is NgZone in Angular?
 Que 45) How Do You Implement Authentication in Angular?
 Que 46) What are Standalone Components in Angular 19?
 Que 47) How do you use Typed Forms? 
+Que 48) What is the purpose of the Signal API? 
 
 
 
@@ -1302,6 +1303,39 @@ Make your code cleaner
 Help other developers understand your form structure easily
 📌 In One Line
 Typed Forms in Angular 19 make reactive forms type-safe, safer, and easier to manage by defining exact data types for each form control.
+
+Que 48) What is the purpose of the Signal API? 
+-----------------------------------------------
+The Signal API in Angular is a new and easier way to manage data (state) in your application.
+In simple words 👉
+A Signal is a special variable that automatically updates the UI whenever its value changes.
+🧠 Why do we need it?
+In older Angular versions:
+We used @Input(), @Output(), BehaviorSubject, or manual change detection.
+Sometimes we had to manage updates manually.
+With Signals, Angular automatically:
+Tracks changes
+Updates only the necessary parts of the screen
+Improves performance
+✅ Simple Example
+import { signal } from '@angular/core';
+count = signal(0);
+increase() {
+  this.count.set(this.count() + 1);
+}
+In HTML:
+<p>{{ count() }}</p>
+<button (click)="increase()">Increase</button>
+👉 When you click the button:
+The signal value changes
+Angular automatically updates the UI
+No manual change detection needed
+🎯 What Signals Do for You
+✔ Automatically track data changes
+✔ Automatically update the view
+✔ Reduce complex RxJS code
+✔ Improve performance
+✔ Make state management easier
 
 
 
