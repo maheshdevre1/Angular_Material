@@ -51,6 +51,7 @@ Que 48) What is the purpose of the Signal API?
 Que 49) How does the inject() function work?
 Que 50) What improvements have been made to standalone testing?
 Que 51) Explain the use of Functional Components ?
+Que 52) What is Ivy in Angular?
 
 
 
@@ -1437,6 +1438,36 @@ Output → Display "Hello, Mahesh"
 It doesn’t need heavy logic — so a functional component is perfect.
 📌 In One Line
 Functional components are simple UI components that focus only on displaying data, making them clean, fast, and easy to test.
+
+Que 52) What is Ivy in Angular?
+-------------------------------
+Ivy is Angular’s new and improved rendering engine.
+In simple words 👉
+Ivy is the system inside Angular that converts your code into something the browser can understand and display.
+🧠 Why was Ivy introduced?
+Older Angular versions were:
+Slower to compile
+Produced bigger application sizes
+Harder to debug
+Ivy was introduced to fix these problems.
+✅ What does Ivy improve?
+Faster Compilation
+Your app builds faster.
+Smaller Bundle Size
+Removes unused code (better tree-shaking).
+Final app size becomes smaller.
+Better Performance
+Loads faster in the browser.
+Better Debugging
+Errors are clearer and easier to understand.
+Easier Updates
+Better backward compatibility.
+🎯 Simple Example
+Imagine you wrote 100 components, but you are using only 50.
+👉 Ivy automatically removes the unused 50 components from the final build.
+Result: Smaller and faster application.
+📌 In One Line
+Ivy is Angular’s modern rendering engine that makes applications faster, smaller, and easier to debug.
 
 
 
