@@ -49,6 +49,7 @@ Que 46) What are Standalone Components in Angular 19?
 Que 47) How do you use Typed Forms? 
 Que 48) What is the purpose of the Signal API? 
 Que 49) How does the inject() function work?
+Que 50) What improvements have been made to standalone testing?
 
 
 
@@ -1367,7 +1368,40 @@ Both do the same thing — but inject() makes it shorter and cleaner.
 📌 In One Line
 The inject() function allows you to get services directly without using constructor injection, making your Angular code simpler and cleaner.
 
-
+Que 50) What improvements have been made to standalone testing?
+---------------------------------------------------------------
+In Angular 19, testing standalone components has become much easier and cleaner.
+Earlier, when testing a component, we usually had to create and configure a testing module (TestBed with NgModule).
+Now, for standalone components, we can test them directly without creating extra modules.
+🧠 What was the problem before?
+Needed extra module setup
+More boilerplate code
+More configuration
+Slower tests in some cases
+✅ What is improved now?
+No need for unnecessary NgModules
+Standalone components can be tested directly.
+Less boilerplate code
+Cleaner and shorter test files.
+Better performance
+Faster test execution.
+Better tree-shaking (removes unused code).
+Better integration with Jasmine & Karma
+Easier configuration.
+Smoother testing experience.
+🎯 Simple Example
+Before (with module setup):
+TestBed.configureTestingModule({
+  declarations: [MyComponent],
+  imports: [CommonModule]
+});
+Now (Standalone):
+TestBed.configureTestingModule({
+  imports: [MyComponent]
+});
+No declarations needed — much simpler.
+📌 In One Line
+Angular 19 makes standalone component testing simpler, faster, and cleaner by removing unnecessary module setup and reducing boilerplate code.
 
 
 
