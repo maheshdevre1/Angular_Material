@@ -53,6 +53,7 @@ Que 50) What improvements have been made to standalone testing?
 Que 51) Explain the use of Functional Components ?
 Que 52) What is Ivy in Angular?
 Que 53) Explain the purpose of Angular Elements ?
+Que 54) What is a Resolver in Angular?
 
 
 
@@ -1507,6 +1508,52 @@ Another company project
 No need to rebuild it again.
 📌 In One Line
 Angular Elements let you turn Angular components into reusable custom HTML elements that can work in any application or framework.
+
+Que 54) What is a Resolver in Angular?
+-------------------------------------
+A Resolver in Angular is used to load data before a page (route) opens.
+In simple words 👉
+A Resolver makes sure the required data is ready before the user sees the page.
+🧠 Why do we need it?
+Normally:
+User clicks a page
+Page opens
+Then API call runs
+User sees loading spinner
+With a Resolver:
+User clicks a page
+Angular loads the data first
+Then the page opens with full data
+So the user does not see an empty page or loading delay.
+✅ Example Situation
+Imagine:
+You open a User Details page
+It needs user information from an API
+Without Resolver:
+Page opens first
+Data loads later
+With Resolver:
+Data loads first
+Then page opens with complete data
+🎯 How it works (Simple Flow)
+User clicks route
+Resolver runs
+Data is fetched
+Route activates
+Component gets ready data
+📌 Simple Example
+In routing:
+{
+  path: 'user/:id',
+  component: UserComponent,
+  resolve: { userData: UserResolver }
+}
+Angular will:
+Call UserResolver
+Wait for data
+Then load UserComponent
+📌 In One Line
+A Resolver loads required data before a page opens, so the user sees a fully loaded page instead of a loading screen.
 
 
 
