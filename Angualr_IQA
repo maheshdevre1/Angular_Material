@@ -58,6 +58,7 @@ Que 55) What is the difference between Angular and React?
 Que 56) How are Angular expressions different from JavaScript expressions? 
 Que 57) What is the purpose of NgModule in Angular?
 Que 58) Difference between Template-driven Forms and Reactive Forms ?
+Que 59) What are Angular Guards?
 
 
 
@@ -1686,6 +1687,42 @@ Form is created explicitly using FormControl, FormGroup
 Works in a synchronous and predictable way
 More control and better for complex validation
 Uses an immutable data model
+
+
+Que 59) What are Angular Guards?
+--------------------------------
+Angular Guards are used to control access to pages (routes) in an Angular application.
+👉 In simple words:
+Guards act like a security check before opening a page.
+They decide:
+Whether a user can open a page
+Whether a user can leave a page
+Whether a module can be loaded
+🔐 Why do we use Guards?
+To:
+Protect pages from unauthorized users
+Stop users from leaving a page accidentally
+Control navigation in the application
+📌 Common Types of Guards
+🔹 1. CanActivate
+👉 Checks if a user can open a route.
+Example:
+Only logged-in users can open the Dashboard page.
+If not logged in → access denied.
+🔹 2. CanDeactivate
+👉 Checks if a user can leave a route.
+Example:
+If a form is not saved, it asks:
+“Are you sure you want to leave?”
+🔹 3. CanLoad
+👉 Checks if a lazy-loaded module can be loaded.
+Example:
+Only admin users can load the Admin module.
+🎯 Simple Example
+Think of Guards like a security guard in a building:
+CanActivate → Checks ID before entering.
+CanDeactivate → Asks before exiting.
+CanLoad → Checks permission before opening a restricted floor.
 
 
 
