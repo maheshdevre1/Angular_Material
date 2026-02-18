@@ -56,6 +56,7 @@ Que 53) Explain the purpose of Angular Elements ?
 Que 54) What is a Resolver in Angular?
 Que 55) What is the difference between Angular and React?
 Que 56) How are Angular expressions different from JavaScript expressions? 
+Que 57) What is the purpose of NgModule in Angular?
 
 
 
@@ -1630,6 +1631,32 @@ if (user.age > 18) {
 👉 JavaScript expression can control full program logic.
 📌 In One Line
 Angular expressions are simple, safe expressions used in templates for displaying data, while JavaScript expressions are more powerful and used for application logic.
+
+Que 57) What is the purpose of NgModule in Angular?
+--------------------------------------------------------
+NgModule is used to organize your Angular application into small, manageable parts.
+In simple words:
+👉 NgModule is like a container or folder that groups related things together.
+It helps to:
+Group related components
+Group directives
+Group pipes
+Register services
+Tell Angular which components belong together
+Why do we need it?
+Without NgModule, your project would become messy and hard to manage.
+With NgModule:
+Code becomes organized
+Application becomes easy to maintain
+Features can be separated into modules
+Large applications become easier to manage
+Example (Simple Idea)
+Think of a school:
+One classroom = One NgModule
+Students (components) inside that classroom belong to that module
+So, NgModule helps Angular understand:
+“These components, directives, and services belong together.”
+⚡ Note: In newer Angular versions (like Angular 15+), we also have Standalone Components, which reduce the need for NgModule in some cases.
 
 
 
