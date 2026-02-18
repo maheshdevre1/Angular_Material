@@ -57,6 +57,7 @@ Que 54) What is a Resolver in Angular?
 Que 55) What is the difference between Angular and React?
 Que 56) How are Angular expressions different from JavaScript expressions? 
 Que 57) What is the purpose of NgModule in Angular?
+Que 58) Difference between Template-driven Forms and Reactive Forms ?
 
 
 
@@ -1657,6 +1658,34 @@ Students (components) inside that classroom belong to that module
 So, NgModule helps Angular understand:
 “These components, directives, and services belong together.”
 ⚡ Note: In newer Angular versions (like Angular 15+), we also have Standalone Components, which reduce the need for NgModule in some cases.
+
+Que 58) Difference between Template-driven Forms and Reactive Forms ?
+------------------------------------------------------------------------
+Angular provides two ways to create forms:
+🔹 Template-driven Forms
+👉 Form logic is written mostly in the HTML template.
+Simple meaning:
+You create and control the form inside the HTML.
+Angular automatically handles most of the work.
+Best for:
+✔ Small and simple forms (like login, contact form)
+Features:
+Uses Angular directives like ngModel
+Supports two-way data binding
+Easier to write
+Less code in TypeScript
+🔹 Reactive Forms
+👉 Form logic is written in the TypeScript file (component class).
+Simple meaning:
+You create the form manually in TypeScript.
+You have full control over validation and form behavior.
+Best for:
+✔ Large and complex forms (like registration with many validations)
+Features:
+Form is created explicitly using FormControl, FormGroup
+Works in a synchronous and predictable way
+More control and better for complex validation
+Uses an immutable data model
 
 
 
