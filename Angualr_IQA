@@ -67,6 +67,7 @@ Que 64)What is Eager Loading?
 Que 65) What is the purpose of Angular’s Renderer2?
 Que 66) What are the benefits of using Web Workers in Angular?
 Que 67) What are Impure Pipes in Angular?
+Que 68) What are Pure Pipes in Angular?
 
 
 
@@ -1963,6 +1964,29 @@ Pure Pipe → Runs only when input changes
 Impure Pipe → Runs on every change detection cycle
 🎯 In one line:
 Impure pipes are pipes that run every time Angular checks for changes, even if the input value has not changed.
+
+Que 68) What are Pure Pipes in Angular?
+----------------------------------------
+👉 Pure pipes are pipes that run only when the input value changes.
+🧠 Simple Meaning
+If the data does not change →
+The pipe will not run again.
+If the data changes →
+The pipe will run and update the result.
+📌 Example
+name = "Mahesh";
+If the name stays the same → pipe does not run again.
+If the name changes to "Rahul" → pipe runs and updates the output.
+🎯 Why are pure pipes better?
+Faster performance
+More efficient
+Run only when needed
+That’s why pure pipes are default in Angular.
+🔹 Simple Comparison
+Pure Pipe → Runs only when input changes (efficient)
+Impure Pipe → Runs every time change detection runs (less efficient)
+✅ In one line:
+Pure pipes are pipes that re-run only when their input value changes, making them efficient and faster.
 
 
 
