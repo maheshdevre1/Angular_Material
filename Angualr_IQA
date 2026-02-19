@@ -61,6 +61,7 @@ Que 58) Difference between Template-driven Forms and Reactive Forms ?
 Que 59) What are Angular Guards ?
 Que 60) How do you create custom validators in Angular?
 Que 61) What is the purpose of Angular animations?
+Que 62) What are Dynamic Components in Angular?
 
 
 
@@ -1792,6 +1793,34 @@ Make state changes look natural
 Improve user interaction
 ✅ In one line:
 Angular animations are used to add smooth visual effects and make applications more interactive and attractive.
+
+Que 62) What are Dynamic Components in Angular?
+----------------------------------------------
+👉 Dynamic components are components that are created at runtime (while the app is running) instead of writing them directly in the HTML.
+🧠 Simple Meaning
+Normally:
+You write a component in the template like this:
+<app-user></app-user>
+This is a static component (fixed in the HTML).
+But sometimes:
+You don’t know in advance which component to show.
+So Angular creates the component dynamically using TypeScript code.
+That is called a Dynamic Component.
+🎯 Why do we use it?
+We use dynamic components when:
+Showing popup dialogs
+Loading different components based on user action
+Creating dashboards with dynamic widgets
+Displaying components based on API response
+📌 Example
+Imagine:
+If user clicks "Admin" → show AdminComponent
+If user clicks "User" → show UserComponent
+Instead of writing both in HTML, you create them dynamically based on condition.
+🧩 In simple words:
+Dynamic components are components that are created and added to the page while the application is running, not fixed in the HTML.
+✅ In one line:
+Dynamic components are components that Angular creates at runtime instead of defining them directly in the template.
 
 
 
