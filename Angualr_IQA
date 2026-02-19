@@ -69,6 +69,7 @@ Que 66) What are the benefits of using Web Workers in Angular?
 Que 67) What are Impure Pipes in Angular?
 Que 68) What are Pure Pipes in Angular?
 Que 69) What is PipeTransform Interface in Angular?
+Que 70) Handling Data from Multiple APIs in Angular?
 
 
 
@@ -2019,6 +2020,48 @@ Modifies it
 Returns the updated value
 ✅ In one line:
 PipeTransform is an interface that ensures a custom pipe has a transform() method to modify data.
+
+Que 70) Handling Data from Multiple APIs in Angular?
+-----------------------------------------------------
+👉 If we need data from multiple APIs and show it together on one page, we must wait until all API responses are received.
+Because API calls are asynchronous, they don’t return data immediately.
+🧠 Simple Solution
+We use RxJS forkJoin.
+👉 forkJoin runs multiple API calls at the same time
+👉 It waits until all APIs finish
+👉 Then it gives all responses together
+📌 Why use forkJoin?
+Runs APIs in parallel
+Waits for all responses
+Returns data in a single array
+Perfect when all API data is required before showing the page
+🔹 Simple Example
+import { forkJoin } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+constructor(private http: HttpClient) { }
+getData() {
+  const api1$ = this.http.get('https://api1.example.com');
+  const api2$ = this.http.get('https://api2.example.com');
+  forkJoin([api1$, api2$]).subscribe(
+    ([response1, response2]) => {
+      // Both API responses are available here
+      console.log(response1);
+      console.log(response2);
+    },
+    error => {
+      console.error('Error fetching data', error);
+    }
+  );
+}
+🎯 How it works (Simple)
+Call API 1
+Call API 2
+Wait until both complete
+Then display data
+⚠️ Important Note
+If any one API fails, forkJoin will return an error.
+✅ In one line:
+We use forkJoin to call multiple APIs together and wait until all responses are received before displaying the data.
 
 
 
