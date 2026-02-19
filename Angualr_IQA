@@ -68,6 +68,7 @@ Que 65) What is the purpose of Angular’s Renderer2?
 Que 66) What are the benefits of using Web Workers in Angular?
 Que 67) What are Impure Pipes in Angular?
 Que 68) What are Pure Pipes in Angular?
+Que 69) What is PipeTransform Interface in Angular?
 
 
 
@@ -1987,6 +1988,37 @@ Pure Pipe → Runs only when input changes (efficient)
 Impure Pipe → Runs every time change detection runs (less efficient)
 ✅ In one line:
 Pure pipes are pipes that re-run only when their input value changes, making them efficient and faster.
+
+Que 69) What is PipeTransform Interface in Angular?
+----------------------------------------------------
+👉 PipeTransform is an interface used when creating a custom pipe in Angular.
+🧠 Simple Meaning
+When you create your own pipe, Angular expects you to implement a method called:
+transform()
+The PipeTransform interface ensures that your pipe has this transform() method.
+📌 Why is it needed?
+It tells Angular:
+👉 “This class is a pipe and it will transform data.”
+🔹 Simple Example
+import { Pipe, PipeTransform } from '@angular/core';
+@Pipe({
+  name: 'uppercaseCustom'
+})
+export class UppercaseCustomPipe implements PipeTransform {
+  transform(value: string): string {
+    return value.toUpperCase();
+  }
+}
+Here:
+PipeTransform makes sure we implement the transform() method.
+transform() changes the input value.
+🎯 What does transform() do?
+It:
+Takes input value
+Modifies it
+Returns the updated value
+✅ In one line:
+PipeTransform is an interface that ensures a custom pipe has a transform() method to modify data.
 
 
 
