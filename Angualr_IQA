@@ -65,6 +65,7 @@ Que 62) What are Dynamic Components in Angular?
 Que 63) What is Angular Material?
 Que 64)What is Eager Loading?
 Que 65) What is the purpose of Angular’s Renderer2?
+Que 66) What are the benefits of using Web Workers in Angular?
 
 
 
@@ -1904,6 +1905,37 @@ Using Renderer2:
 this.renderer.setStyle(element, 'background-color', 'blue');
 🎯 In one line:
 Renderer2 is a safe and Angular-friendly way to change HTML elements without directly touching the DOM.
+
+Que 66) What are the benefits of using Web Workers in Angular?
+--------------------------------------------------------------
+👉 Web Workers allow Angular to run heavy tasks in the background without freezing the UI.
+🧠 Simple Meaning
+Normally, Angular runs everything on the main thread (UI thread).
+If you do heavy work like:
+Large calculations
+Processing big data
+Complex loops
+👉 The screen may freeze or become slow.
+Web Workers solve this problem by running heavy tasks in the background.
+🎯 Benefits in Simple Words
+🔹 1. Improved Performance
+Heavy work runs in the background.
+The main screen stays smooth and fast.
+🔹 2. Better User Experience
+The app does not freeze while doing complex operations.
+Users can still click buttons and scroll normally.
+🔹 3. Parallel Processing
+Tasks can run separately from the main thread.
+This makes big operations faster.
+🔹 4. Better Scalability
+When the app handles large data or high load, Web Workers help manage it efficiently.
+📌 Example
+Imagine:
+You are uploading and processing a large file.
+Without Web Worker → App becomes slow.
+With Web Worker → Processing happens in background, UI remains responsive.
+✅ In one line:
+Web Workers help run heavy tasks in the background so the Angular app stays fast and responsive.
 
 
 
