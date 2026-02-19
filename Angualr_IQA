@@ -64,6 +64,7 @@ Que 61) What is the purpose of Angular animations?
 Que 62) What are Dynamic Components in Angular?
 Que 63) What is Angular Material?
 Que 64)What is Eager Loading?
+Que 65) What is the purpose of Angular’s Renderer2?
 
 
 
@@ -1872,6 +1873,37 @@ Eager Loading → Load everything at start
 Lazy Loading → Load only when needed
 ✅ In one line:
 Eager loading means loading all modules and features when the application starts, even if they are not immediately used.
+
+Que 65) What is the purpose of Angular’s Renderer2?
+----------------------------------------------------
+👉 Renderer2 is used to safely change or update the DOM (HTML elements) in Angular.
+In simple words:
+Instead of directly using JavaScript like:
+document.getElementById("myDiv").style.color = "red";
+Angular recommends using Renderer2 to change elements safely.
+🧠 Why do we use Renderer2?
+🔹 1. Platform Independent
+It works in different environments like:
+Browser
+Server-side rendering (Angular Universal)
+Web workers
+So your app works properly everywhere.
+🔹 2. More Secure
+It helps prevent security issues like XSS attacks.
+It handles DOM updates in a safer way.
+🔹 3. Better Code Structure
+It avoids direct DOM manipulation.
+This makes code:
+Cleaner,Easier to test, Easier to maintain
+🔹 4. Consistent Behavior
+It ensures your app behaves the same in different browsers and platforms.
+📌 Simple Example
+Instead of writing:
+element.style.backgroundColor = 'blue';
+Using Renderer2:
+this.renderer.setStyle(element, 'background-color', 'blue');
+🎯 In one line:
+Renderer2 is a safe and Angular-friendly way to change HTML elements without directly touching the DOM.
 
 
 
