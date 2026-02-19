@@ -66,6 +66,7 @@ Que 63) What is Angular Material?
 Que 64)What is Eager Loading?
 Que 65) What is the purpose of Angular’s Renderer2?
 Que 66) What are the benefits of using Web Workers in Angular?
+Que 67) What are Impure Pipes in Angular?
 
 
 
@@ -1936,6 +1937,32 @@ Without Web Worker → App becomes slow.
 With Web Worker → Processing happens in background, UI remains responsive.
 ✅ In one line:
 Web Workers help run heavy tasks in the background so the Angular app stays fast and responsive.
+
+Que 67) What are Impure Pipes in Angular?
+------------------------------------------
+👉 Impure pipes are pipes that run every time Angular checks for changes.
+🧠 Simple Meaning
+Normally, Angular pipes (pure pipes) run only when the input value changes.
+But impure pipes run:
+Every time change detection runs
+Even if the input value has not changed
+📌 Example
+Imagine you have an array:
+items = ['Apple', 'Banana'];
+If you push a new item:
+items.push('Mango');
+A pure pipe may not detect this change.
+But an impure pipe will detect it and update the result.
+⚠️ Important
+Because impure pipes run very often:
+They can slow down the application
+They may affect performance
+So they should be used carefully.
+🔹 Difference in Simple Words
+Pure Pipe → Runs only when input changes
+Impure Pipe → Runs on every change detection cycle
+🎯 In one line:
+Impure pipes are pipes that run every time Angular checks for changes, even if the input value has not changed.
 
 
 
