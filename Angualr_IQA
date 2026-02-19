@@ -72,6 +72,8 @@ Que 69) What is PipeTransform Interface in Angular?
 Que 70) Handling Data from Multiple APIs in Angular?
 Que 71) Optimizing Angular Performance with Lazy Loading?
 Que 72) Handling Form Validation in Reactive Forms?
+Que 73) Debugging Change Detection Issues in Angular?
+Que 74) Implementing Route Guards for Authentication
 
 
 
@@ -2152,6 +2154,94 @@ Sync validation runs first
 Async validation runs after
 ✅ In one line:
 We use built-in validators for email format and an asynchronous custom validator to check if the email is already in use.
+
+Que 73) Debugging Change Detection Issues in Angular?
+-------------------------------------------------------
+🧠 Problem:
+A component is not updating in the UI even though the data has changed.
+🔍 Step 1: Check Change Detection Strategy
+First, check if the component is using:
+changeDetection: ChangeDetectionStrategy.OnPush
+👉 What is OnPush?
+When using OnPush, Angular only updates the component when:
+An @Input() reference changes
+An event happens inside the component
+Change detection is triggered manually
+It does NOT detect simple object mutation.
+⚠️ Common Mistake
+❌ Wrong (Mutation – UI will NOT update):
+this.data.name = 'Updated';
+Here, the object reference stays the same.
+Angular does not detect the change.
+✅ Correct Way (Change Reference)
+✔ Create a new object:
+this.data = { ...this.data, name: 'Updated' };
+Now the object reference changes → Angular detects update.
+✅ OR Manually Trigger Change Detection
+Inject ChangeDetectorRef:
+constructor(private cd: ChangeDetectorRef) {}
+Then call:
+this.cd.markForCheck();
+This tells Angular:
+👉 “Please check this component again.”
+🧠 How to Debug (Simple Steps)
+Check if OnPush is used
+Check if object is mutated directly
+Ensure new object reference is created
+Use markForCheck() if needed
+🎯 Simple Summary
+With Default strategy → Angular checks everything
+With OnPush strategy → Angular checks only when reference changes
+✅ In one line:
+If a component using OnPush is not updating, make sure to change the object reference or manually trigger change detection using ChangeDetectorRef.
+
+Que 74) Implementing Route Guards for Authentication
+--------------------------------------------------------
+🧠 Problem:
+We want to protect some pages (like Dashboard, Admin) so that only logged-in users can access them.
+✅ Solution: Use Route Guard (CanActivate)
+👉 Angular provides CanActivate guard to protect routes.
+It checks:
+Is user logged in?
+If yes → allow access
+If no → redirect to login page
+🔹 Step 1: Create Auth Guard
+import { Injectable } from '@angular/core';
+import { CanActivate, Router } from '@angular/router';
+import { AuthService } from './auth.service';
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthGuard implements CanActivate {
+  constructor(private authService: AuthService, private router: Router) {}
+  canActivate(): boolean {
+    if (this.authService.isAuthenticated()) {
+      return true;   // Allow access
+    } else {
+      this.router.navigate(['/login']);  // Redirect to login
+      return false;  // Block access
+    }
+  }
+}
+🔹 Step 2: Use Guard in Routing
+const routes: Routes = [
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
+];
+Now:
+If user is logged in → Dashboard opens
+If not logged in → Redirect to login page
+🧠 How It Works (Simple)
+User tries to open a protected route
+Guard checks authentication
+If authenticated → page loads
+If not → redirect to login
+🎯 Real-Life Example
+Think of it like:
+Security guard at office
+If you have ID → enter
+If no ID → denied
+✅ In one line:
+We use a CanActivate route guard to check if the user is authenticated before allowing access to protected routes.
 
 
 
