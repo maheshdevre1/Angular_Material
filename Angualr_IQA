@@ -60,6 +60,7 @@ Que 57) What is the purpose of NgModule in Angular?
 Que 58) Difference between Template-driven Forms and Reactive Forms ?
 Que 59) What are Angular Guards ?
 Que 60) How do you create custom validators in Angular?
+Que 61) What is the purpose of Angular animations?
 
 
 
@@ -1763,6 +1764,34 @@ If username is not allowed → shows error
 If valid → form works normally
 🎯 In one line:
 A custom validator in Angular is a function that checks your own validation rules and returns an error if the input is invalid.
+
+Que 61) What is the purpose of Angular animations?
+----------------------------------------------------
+👉 Angular animations are used to add movement and visual effects to your application.
+In simple words:
+Animations make your app look smooth, attractive, and user-friendly.
+🎯 Why do we use animations?
+Without animations:
+Pages change suddenly
+Elements appear/disappear instantly
+UI feels boring
+With animations:
+Elements can fade in / fade out
+Items can slide
+Buttons can grow or shrink
+Pages can change smoothly
+📌 Example
+When you open a menu → it slides down
+When you delete an item → it fades out
+When a popup opens → it zooms in
+These effects improve the user experience.
+🧠 Simple Meaning
+Angular animations help:
+Show smooth transitions
+Make state changes look natural
+Improve user interaction
+✅ In one line:
+Angular animations are used to add smooth visual effects and make applications more interactive and attractive.
 
 
 
