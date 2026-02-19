@@ -58,7 +58,8 @@ Que 55) What is the difference between Angular and React?
 Que 56) How are Angular expressions different from JavaScript expressions? 
 Que 57) What is the purpose of NgModule in Angular?
 Que 58) Difference between Template-driven Forms and Reactive Forms ?
-Que 59) What are Angular Guards?
+Que 59) What are Angular Guards ?
+Que 60) How do you create custom validators in Angular?
 
 
 
@@ -1723,6 +1724,45 @@ Think of Guards like a security guard in a building:
 CanActivate → Checks ID before entering.
 CanDeactivate → Asks before exiting.
 CanLoad → Checks permission before opening a restricted floor.
+
+Que 60) How do you create custom validators in Angular?
+---------------------------------------------------------
+👉 A custom validator is used when built-in validators (like required, minLength) are not enough.
+In simple words:
+A custom validator is just a function that checks something and:
+Returns error if invalid
+Returns null if valid
+🧠 Why do we need it?
+Example:
+Check if username already exists
+Check if password is strong
+Check if age is above 18
+These validations are not available by default, so we create our own.
+🔹 Simple Steps (Reactive Forms)
+Step 1: Create a Validator Function
+import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+export function usernameValidator(): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const forbiddenUsernames = ['admin', 'test', 'user'];
+    if (forbiddenUsernames.includes(control.value)) {
+      return { usernameTaken: true };   // ❌ Invalid
+    }
+    return null;   // ✅ Valid
+  };
+}
+👉 If username is "admin" → error
+👉 Otherwise → valid
+Step 2: Use It in Form Control
+this.myForm = this.fb.group({
+  username: ['', [usernameValidator()]]
+});
+🔎 How It Works (Simple)
+User enters username
+Validator function runs
+If username is not allowed → shows error
+If valid → form works normally
+🎯 In one line:
+A custom validator in Angular is a function that checks your own validation rules and returns an error if the input is invalid.
 
 
 
