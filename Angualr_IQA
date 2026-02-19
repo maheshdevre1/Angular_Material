@@ -63,6 +63,7 @@ Que 60) How do you create custom validators in Angular?
 Que 61) What is the purpose of Angular animations?
 Que 62) What are Dynamic Components in Angular?
 Que 63) What is Angular Material?
+Que 64)What is Eager Loading?
 
 
 
@@ -1843,6 +1844,34 @@ Instead of creating a button with custom CSS, you can simply use:
 And it automatically looks professional.
 🎯 In one line:
 Angular Material is a library of ready-made, beautiful UI components that help you build modern Angular applications quickly and easily.
+
+Que 64)What is Eager Loading?
+-------------------------------
+👉 Eager loading means loading everything at the start of the application.
+In simple words:
+When the app starts, all modules, components, and services are loaded immediately — even if the user does not need them right away.
+🧠 Simple Meaning
+Imagine:
+When you open the app,
+All pages,All features,All modules
+are loaded at once.
+That is called Eager Loading.
+📌 Example
+If your app has:
+Home Page,Dashboard,Admin Page
+With eager loading:
+All these pages are loaded when the application starts.
+Even if the user only opens the Home page.
+🎯 Advantage
+Faster navigation between pages (because everything is already loaded)
+⚠️ Disadvantage
+Initial loading time is slower
+App may take more time to start
+🔥 Simple Comparison
+Eager Loading → Load everything at start
+Lazy Loading → Load only when needed
+✅ In one line:
+Eager loading means loading all modules and features when the application starts, even if they are not immediately used.
 
 
 
