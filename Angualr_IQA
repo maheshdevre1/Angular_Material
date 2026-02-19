@@ -71,6 +71,7 @@ Que 68) What are Pure Pipes in Angular?
 Que 69) What is PipeTransform Interface in Angular?
 Que 70) Handling Data from Multiple APIs in Angular?
 Que 71) Optimizing Angular Performance with Lazy Loading?
+Que 72) Handling Form Validation in Reactive Forms?
 
 
 
@@ -2100,6 +2101,57 @@ Eager Loading → Load everything at start (slow initial load)
 Lazy Loading → Load only when needed (faster start)
 ✅ In one line:
 Lazy loading improves performance by loading modules only when the user navigates to them, instead of loading everything at startup.
+
+Que 72) Handling Form Validation in Reactive Forms?
+------------------------------------------------------
+🧠 Problem:
+We have an email field and we need to check:
+✅ Email format is correct
+✅ Email is not already in use
+✅ Solution: Use Reactive Forms with:
+Synchronous Validator → For email format
+Asynchronous Validator → For uniqueness check
+🔹 Step 1: Create the Form
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { of } from 'rxjs';
+import { map, delay } from 'rxjs/operators';
+constructor(private fb: FormBuilder) {}
+emailForm: FormGroup = this.fb.group({
+  email: [
+    '',
+    [Validators.required, Validators.email],   // Format validation
+    [this.uniqueEmailValidator.bind(this)]     // Async uniqueness check
+  ]
+});
+🔹 Step 2: Create Async Validator
+uniqueEmailValidator(control: AbstractControl) {
+  const emailsInUse = ['test@example.com', 'user@example.com'];
+  return of(emailsInUse.includes(control.value)).pipe(
+    delay(500), // simulate API call
+    map(isInUse => (isInUse ? { emailInUse: true } : null))
+  );
+}
+🧠 How It Works (Simple)
+User enters email
+Angular checks:
+Is it required?
+Is format correct?
+Then it checks:
+Is email already in database? (Async check)
+If email exists → shows error
+If not → form is valid
+🎯 Why use Async Validator?
+Because checking uniqueness usually requires:
+Calling backend API
+Waiting for server response
+That is asynchronous.
+🔥 Simple Summary
+Validators.email → Checks email format
+uniqueEmailValidator → Checks if email already exists
+Sync validation runs first
+Async validation runs after
+✅ In one line:
+We use built-in validators for email format and an asynchronous custom validator to check if the email is already in use.
 
 
 
