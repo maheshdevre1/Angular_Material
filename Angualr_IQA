@@ -62,6 +62,7 @@ Que 59) What are Angular Guards ?
 Que 60) How do you create custom validators in Angular?
 Que 61) What is the purpose of Angular animations?
 Que 62) What are Dynamic Components in Angular?
+Que 63) What is Angular Material?
 
 
 
@@ -1821,6 +1822,27 @@ Instead of writing both in HTML, you create them dynamically based on condition.
 Dynamic components are components that are created and added to the page while the application is running, not fixed in the HTML.
 ✅ In one line:
 Dynamic components are components that Angular creates at runtime instead of defining them directly in the template.
+
+Que 63) What is Angular Material?
+------------------------------------
+👉 Angular Material is a collection of ready-made UI components for Angular applications.
+In simple words:
+It provides pre-designed buttons, forms, dialogs, tables, menus, etc. that you can use directly in your project.
+🎨 Why do we use Angular Material?
+Instead of designing everything from scratch, Angular Material helps you:
+Build apps faster
+Make apps look modern and attractive
+Follow Google’s Material Design style
+Create responsive applications
+📌 Examples of Components
+Angular Material provides:
+Buttons,Input fields,Dialog boxes (popups),Tables,Cards,Menus,Toolbars,Date pickers
+🧠 Simple Example
+Instead of creating a button with custom CSS, you can simply use:
+<button mat-button>Click Me</button>
+And it automatically looks professional.
+🎯 In one line:
+Angular Material is a library of ready-made, beautiful UI components that help you build modern Angular applications quickly and easily.
 
 
 
