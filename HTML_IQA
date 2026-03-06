@@ -4,6 +4,11 @@ Que 1) What are HTML Elements?
 Que 2) What is a Tag?
 Que 3)What is HTML?
 Que 4)Difference Between HTML and HTML5?
+Que 5) What is the difference between HTML and XHTML?
+Que 6) What is the role of DOCTYPE in HTML?
+Que 7) What if you remove <!DOCTYPE html> from your HTML?
+Que 8) Difference between Head & Body in HTML? Where to place JS link reference?
+
 
 Que 1) What are HTML Elements?
 -------------------------------
@@ -102,3 +107,124 @@ HTML is the standard language used to create web pages.
 HTML5 is the latest version of HTML that supports multimedia, new semantic tags, better performance, and mobile-friendly 
 features.
 
+Que 5) What is the difference between HTML and XHTML?
+-------------------------------------------------------
+HTML
+HTML (HyperText Markup Language) is used to create web pages.
+It is flexible and less strict about rules.
+Tags sometimes do not need to be closed.
+Attribute values can be written without quotes.
+Example:
+<p>Hello World
+<br>
+XHTML
+XHTML (Extensible HyperText Markup Language) is a stricter version of HTML.
+It follows XML rules, so syntax must be very strict.
+All tags must be closed.
+Attribute values must be in quotes.
+Tags must be properly nested and written in lowercase.
+Example:
+<p>Hello World</p>
+<br />
+Que 6) What is the role of DOCTYPE in HTML?
+--------------------------------------------
+Simple Explanation
+DOCTYPE tells the web browser which version of HTML the page is using. 🌐
+It helps the browser display the webpage correctly.
+The DOCTYPE declaration is always written at the top of the HTML document before the <html> tag.
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Page</title>
+</head>
+<body>
+<h1>Hello</h1>
+</body>
+</html>
+Here:
+<!DOCTYPE html> → tells the browser the page is HTML5
+It ensures the browser renders the page in standard mode
+Why DOCTYPE is Important
+1️⃣ Tells the browser the HTML version
+2️⃣ Helps the browser render the page correctly
+3️⃣ Prevents the browser from going into quirks mode (incorrect rendering)
+✅ Simple Interview Answer
+DOCTYPE is a declaration placed at the top of an HTML document that tells the browser which version of HTML is being used so the page can be displayed correctly.
+Que 7) What if you remove <!DOCTYPE html> from your HTML?
+----------------------------------------------------------------
+If you remove <!DOCTYPE html>, the webpage will still open in the browser, but it may not display correctly.
+This happens because the browser does not know which HTML version is being used.
+What Happens When DOCTYPE is Removed
+1️⃣ Browser enters Quirks Mode
+The browser uses old rules to display the page.
+2️⃣ Layout problems may occur
+CSS and design may look different or break.
+3️⃣ Compatibility issues
+Different browsers may show the page differently.
+4️⃣ Harder debugging
+Developers may face problems while fixing errors.
+Example Without DOCTYPE
+<html>
+<head>
+<title>Example</title>
+</head>
+<body>
+<h1>Hello</h1>
+</body>
+</html>
+The page may still load, but rendering may not follow modern HTML standards.
+✅ Simple Interview Answer
+If <!DOCTYPE html> is removed, the browser may switch to quirks mode, which can cause layout, compatibility, and rendering issues because the browser cannot identify the HTML version.
+Que 8) Difference between Head & Body in HTML? Where to place JS link reference?
+Difference between <head> and <body>
+--------------------------------------------
+<head> Tag
+The <head> section contains information about the webpage.
+This information is not directly visible on the webpage.
+It is used for metadata and settings.
+Common things inside <head>:
+<title> – page title shown in browser tab
+<meta> – page information
+<link> – CSS files
+<script> – JavaScript files
+Example:
+<head>
+<title>My Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body> Tag
+The <body> section contains the actual content of the webpage.
+Everything inside it is visible to the user.
+Examples of content:
+Headings
+Paragraphs
+Images
+Buttons
+Links
+Example:
+<body>
+<h1>Welcome</h1>
+<p>This is my website</p>
+</body>
+Difference Table
+Head	Body
+Contains page information	Contains visible content
+Not visible to users	Visible to users
+Includes title, meta, CSS	Includes text, images, buttons
+Where to Place JavaScript Link Reference?
+JavaScript can be placed in two places:
+1️⃣ Inside <head>
+<head>
+<script src="script.js"></script>
+</head>
+But this may slow page loading because the browser loads JS before the page content.
+2️⃣ Best Practice – Before </body>
+<body>
+<h1>Hello</h1>
+<script src="script.js"></script>
+</body>
+✔ This is recommended because the page loads first, then JavaScript runs.
+✅ Simple Interview Answer
+The <head> tag contains metadata and page information that is not visible to users, while the <body> tag contains the visible
+content of the webpage. JavaScript files are usually placed before the closing </body> tag for better page loading performance. 🚀
