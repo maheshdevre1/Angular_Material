@@ -1,1 +1,43 @@
+HTML Interview question and answer
+-----------------------------------
+Que 1) What are HTML Elements?
+Que 2) What is a Tag?
 
+Que 1) What are HTML Elements?
+-------------------------------
+HTML elements are the building blocks of a web page. 🧱
+Every web page is made using many HTML elements.
+An HTML element has 3 parts:
+Opening Tag – tells the browser where the element starts
+Content – the text or data inside the element
+Closing Tag – tells the browser where the element ends
+Example
+<p>Interview Happy</p>
+Explanation:
+<p> → Opening tag
+Interview Happy → Content
+</p> → Closing tag
+So the complete element is:
+<p>Interview Happy</p>
+Que 2) What is a Tag?
+------------------------
+A Tag is only the keyword inside < > brackets.
+Example:
+<p>      → Opening Tag
+</p>     → Closing Tag
+Tags do not contain content.
+They only mark the start or end of an element.
+3️⃣ Difference Between Element and Tag
+Tag	Element
+Part of HTML code	Complete structure
+Written inside < >	Includes tag + content
+Example: <p>	Example: <p>Hello</p>
+Simple Example
+Tag:
+<p>
+</p>
+Element:
+<p>Hello</p>
+✅ One-line interview answer
+HTML elements are the building blocks of web pages and consist of a start tag, content, and an end tag. A tag is
+only the opening or closing part of an element.
