@@ -2,6 +2,8 @@ HTML Interview question and answer
 -----------------------------------
 Que 1) What are HTML Elements?
 Que 2) What is a Tag?
+Que 3)What is HTML?
+Que 4)Difference Between HTML and HTML5?
 
 Que 1) What are HTML Elements?
 -------------------------------
@@ -41,3 +43,62 @@ Element:
 ✅ One-line interview answer
 HTML elements are the building blocks of web pages and consist of a start tag, content, and an end tag. A tag is
 only the opening or closing part of an element.
+
+Que 3)What is HTML?
+-------------------
+HTML (HyperText Markup Language) is the standard language used to create web pages. 🌐
+It tells the browser how to display content like:
+Text,Images,Links,Videos,Tables
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Page</title>
+</head>
+<body>
+<h1>Hello World</h1>
+<p>This is my first webpage</p>
+</body>
+</html>
+Here HTML uses tags to structure the page.
+Que 4)Difference Between HTML and HTML5?
+----------------------------------------
+HTML	HTML5
+Older version of HTML	Latest version
+Limited multimedia support	Built-in audio & video support
+Needs plugins like Flash	No plugins needed
+Fewer semantic tags	New semantic tags added
+Less support for mobile apps	Better for mobile applications
+Example of New HTML5 Tags
+<header>
+<footer>
+<section>
+<article>
+<nav>
+These make the website more organized and readable.
+3️⃣ Advantages of HTML5
+1️⃣ Multimedia Support
+HTML5 supports audio and video without plugins.
+Example
+<video controls>
+<source src="movie.mp4">
+</video>
+2️⃣Better for Mobile Devices 📱
+HTML5 works well on phones, tablets, and modern browsers.
+3️⃣ New Semantic Tags
+Tags like:
+<header>
+<footer>
+<article>
+make code clean and easy to understand.
+4️⃣ Offline Storage
+HTML5 can store data in the browser using:
+Local Storage
+Session Storage
+5️⃣ Faster Performance ⚡
+HTML5 pages load faster and smoother.
+✅ Simple Interview Answer (Best)
+HTML is the standard language used to create web pages.
+HTML5 is the latest version of HTML that supports multimedia, new semantic tags, better performance, and mobile-friendly 
+features.
+
