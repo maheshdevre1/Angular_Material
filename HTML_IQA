@@ -10,6 +10,12 @@ Que 7) What if you remove <!DOCTYPE html> from your HTML?
 Que 8) Difference between Head & Body in HTML? Where to place JS link reference?
 Que 9) What is Title Tag in HTML? What are the 4 advantages of Title tag?
 Que 10) What are Meta Tags? What are the 5 types of meta tags?
+Que 11) What are the roles and uses of the <div> element in HTML?
+Que 12) What is the difference between <div> and <span> element?
+Que 13)What is the role of <p>, <a>, <br>, <hr>, <em>, <img>, <input> & <button> elements?
+Que 14)What is the role of header, main, section, footer & address elements in HTML?
+Que 15) What is the role of Heading tags in HTML? How does it impact SEO?
+Que 16) What is the difference between <section> & <article> elements?
 
 
 Que 1) What are HTML Elements?
@@ -296,3 +302,65 @@ Example
 ✅ Simple Interview Answer
 Meta tags are HTML tags placed inside the head section that provide information about a webpage to browsers and search engines. 
 The five common types are charset, description, keywords, author, and viewport meta tags. 🚀
+
+Que 11) What are the roles and uses of the <div> element in HTML?
+------------------------------------------------------------------
+The <div> tag is used to group or divide sections of a webpage. It helps organize content and is mainly used for layout and \
+styling with CSS. It does not have a specific meaning but acts as a container for other elements.
+Example:
+<div>
+<h2>Welcome</h2>
+<p>This is a section of the page</p>
+</div>
+
+Que 12) What is the difference between <div> and <span> element?
+----------------------------------------------------------------
+<div>	<span>
+Block-level element==>Inline element
+Takes full width of the page==>Takes only needed space
+Used for large sections/layout==>Used for small text styling
+Example:
+<div>This is a block section</div>
+<span>This is inline text</span>
+
+Que 13)What is the role of <p>, <a>, <br>, <hr>, <em>, <img>, <input> & <button> elements?
+-----------------------------------------------------------------------------------------
+<p> → Defines a paragraph of text.
+<a> → Creates a hyperlink to another page or website.
+<br> → Inserts a line break.
+<hr> → Creates a horizontal line to separate content.
+<em> → Emphasizes text (usually italic).
+<img> → Displays an image on the webpage.
+<input> → Creates input fields in forms.
+<button> → Creates a clickable button.
+
+Que 14)What is the role of header, main, section, footer & address elements in HTML?
+-----------------------------------------------------------------------------------
+<header> → Contains the top part of the webpage like logo or navigation.
+<main> → Contains the main content of the webpage.
+<section> → Defines a section or group of related content.
+<footer> → Contains the bottom part of the page like copyright or contact info.
+<address> → Shows contact information of the author or organization.
+
+Que 15) What is the role of Heading tags in HTML? How does it impact SEO?
+-------------------------------------------------------------------------
+Heading tags <h1> to <h6> are used to define headings and subheadings.
+<h1> → Main heading
+<h2> to <h6> → Subheadings
+They help organize content and make it easier to read.
+For SEO, search engines use headings to understand the structure and importance of content, which helps improve search ranking.
+
+Que 16) What is the difference between <section> & <article> elements?
+-----------------------------------------------------------------------
+<section>	<article>
+Groups related content	Independent content
+Used for dividing page sections	Can stand alone
+Example: page chapters	Example: blog post or news article
+Example:
+<section>
+<h2>Sports News</h2>
+<article>
+<h3>Cricket Match</h3>
+<p>India won the match</p>
+</article>
+</section>
