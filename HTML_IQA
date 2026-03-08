@@ -33,6 +33,11 @@ Que 30) What is a Fragment Identifier in a URL?
 Que 31) How do you add an external stylesheet in your HTML?
 Que 32) How do you open a link in a new tab?
 Que 33) How do you create an Email Link?
+Que 34) What are the different Types of Lists in HTML?
+Que 35) What is a Nested List in HTML?
+Que 36) What are table, tr, th, td elements? What are table advantages & disadvantages?
+Que 37) What is the colspan attribute in HTML?
+Que 38) What is the best way to add a border to a table, column and cell?
 
 Que 1) What are HTML Elements?
 -------------------------------
@@ -580,3 +585,89 @@ Use the mailto: keyword inside the href attribute.
 Example:
 <a href="mailto:example@gmail.com">Send Email</a>
 When clicked, it opens the user's email application to send an email.
+
+Que 34) What are the different Types of Lists in HTML?
+--------------------------------------------------------
+HTML provides 3 types of lists:
+1️⃣ Ordered List (<ol>) – Displays items in numbered order.
+Example:
+<ol>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ol>
+2️⃣ Unordered List (<ul>) – Displays items with bullet points.
+Example:
+<ul>
+<li>Apple</li>
+<li>Mango</li>
+<li>Banana</li>
+</ul>
+3️⃣ Description List (<dl>) – Used for terms and descriptions.
+Example:
+<dl>
+<dt>HTML</dt>
+<dd>HyperText Markup Language</dd>
+</dl>
+Que 35) What is a Nested List in HTML?
+---------------------------------------
+A Nested list is a list inside another list.
+Example:
+<ul>
+<li>Fruits
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+    </ul>
+</li>
+</ul>
+Here the second list is inside the first list, so it is called a nested list.
+Que 36) What are table, tr, th, td elements? What are table advantages & disadvantages?
+-----------------------------------------------------------------------------------------
+<table> → Creates a table.
+<tr> → Table row.
+<th> → Table header cell.
+<td> → Table data cell.
+Example:
+<table>
+<tr>
+<th>Name</th>
+<th>Age</th>
+</tr>
+<tr>
+<td>Mahesh</td>
+<td>25</td>
+</tr>
+</table>
+Advantages of Tables
+Organizes data clearly
+Easy to read structured information
+Useful for reports and data display
+Disadvantages of Tables
+Not good for webpage layout design
+Can make pages slow if very large
+Less responsive on mobile devices
+Que 37) What is the colspan attribute in HTML?
+-----------------------------------------------
+The colspan attribute allows a table cell to span across multiple columns.
+Example:
+<table border="1">
+<tr>
+<th colspan="2">Student Info</th>
+</tr>
+<tr>
+<td>Name</td>
+<td>Mahesh</td>
+</tr>
+</table>
+Here the header covers two columns.
+Que 38) What is the best way to add a border to a table, column and cell?
+-------------------------------------------------------------------------
+The best way is using CSS.
+Example:
+<style>
+table, th, td {
+border: 1px solid black;
+}
+</style>
+This adds borders to the table, header cells, and data cells.
