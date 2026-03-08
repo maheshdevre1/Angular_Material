@@ -16,7 +16,11 @@ Que 13)What is the role of <p>, <a>, <br>, <hr>, <em>, <img>, <input> & <button>
 Que 14)What is the role of header, main, section, footer & address elements in HTML?
 Que 15) What is the role of Heading tags in HTML? How does it impact SEO?
 Que 16) What is the difference between <section> & <article> elements?
-
+Que 17)What are Root, Parent, Child & Nested elements?
+Que 18)What are Empty Elements?
+Que 19)What are Semantic Elements in HTML?
+Que 20) Can HTML tags be written in Uppercase?
+Que 21) List all Block-Level & Inline Elements in HTML ?
 
 Que 1) What are HTML Elements?
 -------------------------------
@@ -364,3 +368,83 @@ Example:
 <p>India won the match</p>
 </article>
 </section>
+
+Que 17)What are Root, Parent, Child & Nested elements?
+------------------------------------------------------
+Root element → The main element of an HTML document. In HTML, the <html> tag is the root element.
+Parent element → An element that contains other elements inside it.
+Child element → An element that is inside another element.
+Nested element → When elements are placed inside other elements.
+Example:
+<html>
+<body>
+<p>Hello</p>
+</body>
+</html>
+<html> → Root
+<body> → Child of <html> and parent of <p>
+<p> → Child element
+<p> inside <body> → Nested element
+Que 18)What are Empty Elements?
+-------------------------------
+Empty elements are HTML elements that do not have closing tags and do not contain content.
+Examples:
+<br> → Line break
+<hr> → Horizontal line
+<img> → Image
+<input> → Input field
+Example:
+<p>Hello<br>World</p>
+Que 19)What are Semantic Elements in HTML?
+------------------------------------------
+Semantic elements are HTML tags that clearly describe the meaning of the content.
+Examples:
+<header>
+<footer>
+<article>
+<section>
+<nav>
+They help developers and search engines understand the structure of the webpage.
+Example:
+<header>
+<h1>My Website</h1>
+</header>
+Que 20) Can HTML tags be written in Uppercase?
+-----------------------------------------------
+Yes, HTML tags can be written in uppercase or lowercase, and browsers will still understand them.
+Example:
+<P>Hello</P>
+However, best practice is to write HTML tags in lowercase, especially in HTML5.
+Example:
+<p>Hello</p>
+Q. What are the 3 differences between Block-Level & Inline Elements?
+Block-Level Elements	Inline Elements
+Take full width of the page	Take only required width
+Start on a new line	Do not start on a new line
+Can contain block and inline elements	Usually contain text or inline elements
+Examples:
+Block → <div>, <p>, <section>
+Inline → <span>, <a>, <em>
+Que 21) List all Block-Level & Inline Elements in HTML ?
+----------------------------------------------------------
+Common Block-Level Elements:
+<div>
+<p>
+<h1> to <h6>
+<section>
+<article>
+<header>
+<footer>
+<nav>
+<ul>
+<ol>
+<li>
+Common Inline Elements:
+<span>
+<a>
+<em>
+<strong>
+<img>
+<input>
+<label>
+<br>
