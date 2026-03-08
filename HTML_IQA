@@ -21,6 +21,11 @@ Que 18)What are Empty Elements?
 Que 19)What are Semantic Elements in HTML?
 Que 20) Can HTML tags be written in Uppercase?
 Que 21) List all Block-Level & Inline Elements in HTML ?
+Que 22) What are HTML Attributes? What are the Types of HTML attributes?
+Que 23) What are the Id, Style & Class attributes of an element? When to use what?
+Que 24) What will happen if two elements have same ids?
+Que 25) How to specify Multiple Classes for single element? What is the style precedence?
+Que 26) What are Data Attributes in HTML?
 
 Que 1) What are HTML Elements?
 -------------------------------
@@ -448,3 +453,52 @@ Common Inline Elements:
 <input>
 <label>
 <br>
+
+Que 22) What are HTML Attributes? What are the Types of HTML attributes?
+--------------------------------------------------------------------------
+HTML attributes provide additional information about an HTML element.
+They are written inside the opening tag and usually come as name="value" pairs.
+Example:
+<a href="https://example.com">Visit</a>
+Here href is the attribute and https://example.com
+ is its value.
+Types of HTML Attributes:
+Global Attributes – Can be used with almost all HTML elements (example: id, class, style, title).
+Specific Attributes – Used only with certain elements (example: href for <a>, src for <img>, type for <input>).
+Que 23) What are the Id, Style & Class attributes of an element? When to use what?
+----------------------------------------------------------------------------------
+id attribute → Gives a unique name to an element. Used for JavaScript or CSS targeting.
+class attribute → Used to group multiple elements so the same CSS style can be applied.
+style attribute → Used to apply inline CSS directly to an element.
+Example:
+<p id="title" class="text" style="color:red;">Hello</p>
+When to use:
+Use id → when the element must be unique.
+Use class → when many elements share the same style.
+Use style → for quick inline styling.
+Que 24) What will happen if two elements have same ids?
+------------------------------------------------------
+If two elements have the same id, it breaks HTML rules because id must be unique.
+Problems that may occur:
+JavaScript may select only the first element.
+CSS targeting may not work correctly.
+It can cause unexpected behavior in the webpage.
+Que 25) How to specify Multiple Classes for single element? What is the style precedence?
+---------------------------------------------------------------------------------------------
+You can add multiple classes by separating them with spaces.
+Example:
+<p class="red bold large">Hello</p>
+Style precedence (priority order):
+1️⃣ Inline style (style="") – Highest priority
+2️⃣ ID selector (#id)
+3️⃣ Class selector (.class)
+4️⃣ Element selector (p, div) – Lowest priority
+Que 26) What are Data Attributes in HTML?
+------------------------------------------
+Data attributes are custom attributes used to store extra information in HTML elements.
+They start with data-.
+Example:
+<div data-user="Mahesh" data-id="101"></div>
+These values can be accessed using JavaScript.
+Example (JavaScript):
+element.dataset.user
