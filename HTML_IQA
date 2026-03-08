@@ -8,6 +8,8 @@ Que 5) What is the difference between HTML and XHTML?
 Que 6) What is the role of DOCTYPE in HTML?
 Que 7) What if you remove <!DOCTYPE html> from your HTML?
 Que 8) Difference between Head & Body in HTML? Where to place JS link reference?
+Que 9) What is Title Tag in HTML? What are the 4 advantages of Title tag?
+Que 10) What are Meta Tags? What are the 5 types of meta tags?
 
 
 Que 1) What are HTML Elements?
@@ -150,7 +152,8 @@ Why DOCTYPE is Important
 2️⃣ Helps the browser render the page correctly
 3️⃣ Prevents the browser from going into quirks mode (incorrect rendering)
 ✅ Simple Interview Answer
-DOCTYPE is a declaration placed at the top of an HTML document that tells the browser which version of HTML is being used so the page can be displayed correctly.
+DOCTYPE is a declaration placed at the top of an HTML document that tells the browser which version of HTML is
+being used so the page can be displayed correctly.
 Que 7) What if you remove <!DOCTYPE html> from your HTML?
 ----------------------------------------------------------------
 If you remove <!DOCTYPE html>, the webpage will still open in the browser, but it may not display correctly.
@@ -175,7 +178,8 @@ Example Without DOCTYPE
 </html>
 The page may still load, but rendering may not follow modern HTML standards.
 ✅ Simple Interview Answer
-If <!DOCTYPE html> is removed, the browser may switch to quirks mode, which can cause layout, compatibility, and rendering issues because the browser cannot identify the HTML version.
+If <!DOCTYPE html> is removed, the browser may switch to quirks mode, which can cause layout, compatibility, and rendering 
+issues because the browser cannot identify the HTML version.
 Que 8) Difference between Head & Body in HTML? Where to place JS link reference?
 Difference between <head> and <body>
 --------------------------------------------
@@ -228,3 +232,67 @@ But this may slow page loading because the browser loads JS before the page cont
 ✅ Simple Interview Answer
 The <head> tag contains metadata and page information that is not visible to users, while the <body> tag contains the visible
 content of the webpage. JavaScript files are usually placed before the closing </body> tag for better page loading performance. 🚀
+
+Que 9) What is Title Tag in HTML? What are the 4 advantages of Title tag?
+---------------------------------------------------------------------------
+Title Tag in HTML
+The Title tag (<title>) is used to define the title of a web page.
+It is written inside the <head> section of an HTML document.
+The title appears in the browser tab when you open a webpage.
+Example
+<head>
+<title>My First Website</title>
+</head>
+Here “My First Website” will appear in the browser tab.
+4 Advantages of Title Tag
+1️⃣ Shows Page Title in Browser
+It displays the name of the webpage on the browser tab.
+2️⃣ Helps in SEO (Search Engine Optimization)
+Search engines like Google use the title to understand the webpage.
+3️⃣ Helps Users Identify the Page
+Users can easily know what the page is about.
+4️⃣ Useful for Bookmarking
+When users bookmark a page, the title becomes the bookmark name.
+✅ Simple Interview Answer
+The Title tag in HTML defines the title of a webpage and is placed inside the head section. It appears in the browser tab 
+and helps with SEO, user understanding, and bookmarking of the webpage. 🚀
+Que 10) What are Meta Tags? What are the 5 types of meta tags?
+---------------------------------------------------------
+Meta tags are HTML tags that provide information about a webpage to the browser and search engines.
+They are written inside the <head> section of an HTML document and are not visible on the webpage.
+Meta tags help with:
+SEO
+Page description
+Character encoding
+Mobile responsiveness
+Example
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="HTML tutorial">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="Mahesh">
+</head>
+5 Types of Meta Tags
+1️⃣ Charset Meta Tag
+Defines the character encoding used in the webpage.
+Example
+<meta charset="UTF-8">
+2️⃣ Description Meta Tag
+Provides a short description of the webpage for search engines.
+Example
+<meta name="description" content="Learn HTML easily">
+3️⃣ Keywords Meta Tag
+Defines keywords related to the webpage.
+Example
+<meta name="keywords" content="HTML, CSS, Web Development">
+4️⃣ Author Meta Tag
+Specifies the author of the webpage.
+Example
+<meta name="author" content="Mahesh">
+5️⃣ Viewport Meta Tag
+Helps make the website mobile-friendly.
+Example
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+✅ Simple Interview Answer
+Meta tags are HTML tags placed inside the head section that provide information about a webpage to browsers and search engines. 
+The five common types are charset, description, keywords, author, and viewport meta tags. 🚀
