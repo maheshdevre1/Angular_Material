@@ -26,6 +26,13 @@ Que 23) What are the Id, Style & Class attributes of an element? When to use wha
 Que 24) What will happen if two elements have same ids?
 Que 25) How to specify Multiple Classes for single element? What is the style precedence?
 Que 26) What are Data Attributes in HTML?
+Que 27) What are the 5 Types of Links in HTML?
+Que 28) What is the difference between Absolute & Relative URLs?
+Que 29) What is the purpose of the <nav> element in HTML?
+Que 30) What is a Fragment Identifier in a URL?
+Que 31) How do you add an external stylesheet in your HTML?
+Que 32) How do you open a link in a new tab?
+Que 33) How do you create an Email Link?
 
 Que 1) What are HTML Elements?
 -------------------------------
@@ -502,3 +509,74 @@ Example:
 These values can be accessed using JavaScript.
 Example (JavaScript):
 element.dataset.user
+
+Que 27) What are the 5 Types of Links in HTML?
+-------------------------------------------------
+1️⃣ External Link – Links to another website.
+<a href="https://www.google.com">Google</a>
+2️⃣ Internal Link – Links to another page within the same website.
+<a href="about.html">About Us</a>
+3️⃣ Anchor (Bookmark) Link – Links to a specific section of the same page.
+<a href="#contact">Go to Contact</a>
+4️⃣ Email Link – Opens the email application to send an email.
+<a href="mailto:example@gmail.com">Send Email</a>
+5️⃣ Image Link – An image used as a clickable link.
+<a href="home.html"><img src="logo.png"></a>
+Que 28) What is the difference between Absolute & Relative URLs?
+----------------------------------------------------------------
+Absolute URL==>	Relative URL
+Full web address==>	Partial address
+Includes protocol and domain==>	Uses current website path
+Used for external links	==>Used for internal links
+Example:
+Absolute:
+<a href="https://www.example.com/page.html">Link</a>
+Relative:
+<a href="page.html">Link</a>
+Que 29) What is the purpose of the <nav> element in HTML?
+------------------------------------------------------------
+The <nav> tag is used to define navigation links in a webpage.
+It usually contains links like:
+Home
+About
+Contact
+Services
+Example:
+<nav>
+<a href="home.html">Home</a>
+<a href="about.html">About</a>
+</nav>
+Que 30) What is a Fragment Identifier in a URL?
+-------------------------------------------------
+A fragment identifier is used to jump to a specific section of a webpage.
+It uses the # symbol.
+Example:
+<a href="#section1">Go to Section 1</a>
+And the target element:
+<h2 id="section1">Section 1</h2>
+Q. What is the purpose of the <base> element in HTML?
+The <base> tag defines the base URL for all relative links in a webpage.
+It is written inside the <head> section.
+Example:
+<base href="https://example.com/">
+After this, all relative links will use this base URL.
+Que 31) How do you add an external stylesheet in your HTML?
+------------------------------------------------------------
+You add it using the <link> tag inside the <head> section.
+Example:
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+This connects the CSS file to the HTML page.
+Que 32) How do you open a link in a new tab?
+---------------------------------------------
+Use the target="_blank" attribute.
+Example:
+<a href="https://google.com" target="_blank">Open Google</a>
+This opens the link in a new browser tab.
+Que 33) How do you create an Email Link?
+----------------------------------------
+Use the mailto: keyword inside the href attribute.
+Example:
+<a href="mailto:example@gmail.com">Send Email</a>
+When clicked, it opens the user's email application to send an email.
