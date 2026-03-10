@@ -1,1 +1,103 @@
+Que 1)What is CSS? What are the 5 ways to Implement CSS in HTML?
+Que 2) What is Inline Style in CSS? When to use it in real applications?
+Que 3) What is Internal Stylesheet in CSS? When to use it in real applications?
+Que 4) What is External Stylesheet in CSS? When to use it in real applications?
+Que 5) What are the 5 advantages of external stylesheet?
+Que 6) How do you Include CSS in a webpage or HTML?
+Que 7) How to implement CSS using @import rule?
+Que 8) What is CSS Preprocessors? What is SCSS?
+Que 9) What are the 3 Types of CSS Preprocessors?
 
+Que 1)What is CSS? What are the 5 ways to Implement CSS in HTML?
+-----------------------------------------------------------------
+CSS (Cascading Style Sheets) is used to style and design web pages.
+It controls things like colors, fonts, layout, spacing, and responsiveness.
+5 ways to implement CSS in HTML:
+1️⃣ Inline CSS
+<p style="color:red;">Hello</p>
+2️⃣ Internal CSS
+<style>
+p { color: red; }
+</style>
+3️⃣ External CSS
+<link rel="stylesheet" href="style.css">
+4️⃣ @import rule
+@import url("style.css");
+5️⃣ CSS Frameworks / Libraries
+Example: Bootstrap CSS included in HTML.
+Que 2) What is Inline Style in CSS? When to use it in real applications?
+Inline CSS is written directly inside the HTML tag using the style attribute.
+Example:
+<p style="color:blue;">Hello</p>
+When to use:
+Quick testing
+Small changes for a single element
+Temporary styling
+It is not recommended for large projects.
+Que 3) What is Internal Stylesheet in CSS? When to use it in real applications?
+--------------------------------------------------------------------------------
+Internal CSS is written inside the <style> tag in the <head> section.
+Example:
+<head>
+<style>
+p { color: green; }
+</style>
+</head>
+When to use:
+Small websites
+Single-page applications
+Testing styles
+Que 4) What is External Stylesheet in CSS? When to use it in real applications?
+-------------------------------------------------------------------------------
+External CSS is written in a separate .css file and linked to HTML.
+Example:
+<link rel="stylesheet" href="style.css">
+Example CSS file:
+p {
+color: red;
+}
+When to use:
+Large websites
+Multiple pages
+Real-world projects
+Que 5) What are the 5 advantages of external stylesheet?
+-------------------------------------------------------
+1️⃣ Reusable across multiple pages
+2️⃣ Cleaner HTML code
+3️⃣ Faster page loading (browser caching)
+4️⃣ Easier maintenance
+5️⃣ Better project organization
+Que 6) How do you Include CSS in a webpage or HTML?
+----------------------------------------------------
+CSS can be included using:
+Inline CSS (style attribute)
+Internal CSS (<style> tag)
+External CSS (<link> tag)
+Example:
+<link rel="stylesheet" href="style.css">
+Que 7) How to implement CSS using @import rule?
+-----------------------------------------------
+The @import rule is used to import another CSS file into a stylesheet.
+Example:
+@import url("style.css");
+It is usually written inside a CSS file or <style> tag.
+Que 8) What is CSS Preprocessors? What is SCSS?
+------------------------------------------------
+CSS Preprocessors are tools that extend CSS with extra features like:
+Variables
+Nesting
+Functions
+Mixins
+They make CSS more powerful and easier to manage.
+SCSS (Sassy CSS) is a popular CSS preprocessor syntax used in Sass.
+Example:
+$color: red;
+p {
+  color: $color;
+}
+Que 9) What are the 3 Types of CSS Preprocessors?
+-----------------------------------------------
+1️⃣ Sass / SCSS
+2️⃣ LESS
+3️⃣ Stylus
+These preprocessors help developers write cleaner and more maintainable CSS.
