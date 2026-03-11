@@ -1,1 +1,139 @@
+Q1. What is JavaScript?
+Q2. What are data types in JavaScript? What are primitive data types?
+Q3. Difference between Primitive and Non-Primitive Data Types
+Q4. What are Arrays, Functions and Objects?
+Q5. What is Scope in JavaScript?
 
+Q1. What is JavaScript?
+-------------------------
+JavaScript is a programming language used to make web pages interactive and dynamic.
+With JavaScript you can:
+Show alerts
+Validate forms
+Change webpage content
+Create animations
+Handle button clicks
+It works mainly inside the browser.
+Example
+alert("Hello Mahesh!");
+This will show a popup message in the browser.
+Another Example
+let name = "Mahesh";
+console.log(name);
+Output in console:
+Mahesh
+Q2. What are data types in JavaScript? What are primitive data types?
+---------------------------------------------------------------------
+Data Types
+Data types define what kind of data a variable can store.
+Example:
+Number
+Text
+True/False
+Object
+Example code:
+let age = 25;       // Number
+let name = "Mahesh"; // String
+let isActive = true; // Boolean
+Primitive Data Types
+Primitive data types store single simple values.
+There are 7 primitive data types in JavaScript:
+String – text
+Number – numeric value
+Boolean – true or false
+Undefined – variable declared but not assigned
+Null – empty value
+BigInt – very large numbers
+Symbol – unique identifier
+Example
+let name = "Mahesh";    // String
+let age = 25;           // Number
+let isStudent = true;   // Boolean
+let city;               // Undefined
+let data = null;        // Null
+Q3. Difference between Primitive and Non-Primitive Data Types
+-----------------------------------------------------------
+Primitive Data Types ==>	Non-Primitive Data Types
+Store single value ==>	Store multiple values
+Simple data	==>Complex data
+Immutable ==>	Mutable
+Stored directly in memory ==>	Stored by reference
+Primitive Example
+let a = 10;
+let b = a;
+b = 20;
+console.log(a); // 10
+console.log(b); // 20
+Here a does not change.
+Non-Primitive Example
+let obj1 = {name: "Mahesh"};
+let obj2 = obj1;
+obj2.name = "Rahul";
+console.log(obj1.name); // Rahul
+Here both objects change because they reference the same memory.
+Q4. What are Arrays, Functions and Objects?
+--------------------------------------------------
+1. Array
+An array stores multiple values in a single variable.
+Example
+let fruits = ["Apple", "Mango", "Banana"];
+console.log(fruits[0]);
+Output
+Apple
+2. Function
+A function is a block of code that performs a specific task.
+Example
+function greet() {
+  console.log("Hello Mahesh");
+}
+greet();
+Output
+Hello Mahesh
+Function with parameters
+function add(a, b) {
+  return a + b;
+}
+console.log(add(5, 3));
+Output
+8
+3. Object
+An object stores data in key-value pairs.
+Example
+let person = {
+  name: "Mahesh",
+  age: 25,
+  city: "Mumbai"
+};
+console.log(person.name);
+Output
+Mahesh
+Q5. What is Scope in JavaScript?
+--------------------------------
+Scope defines where a variable can be accessed in the program.
+There are 3 types of scope:
+Global Scope
+Function Scope
+Block Scope
+1. Global Scope
+Variable declared outside a function.
+let name = "Mahesh";
+function show() {
+  console.log(name);
+}
+show();
+Accessible everywhere.
+2. Function Scope
+Variable declared inside a function.
+function test() {
+  let age = 25;
+  console.log(age);
+}
+test();
+age cannot be accessed outside the function.
+3. Block Scope
+Variables declared with let or const inside {}
+{
+  let city = "Mumbai";
+  console.log(city);
+}
+city cannot be used outside the block.
