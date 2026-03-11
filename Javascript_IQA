@@ -3,6 +3,12 @@ Q2. What are data types in JavaScript? What are primitive data types?
 Q3. Difference between Primitive and Non-Primitive Data Types
 Q4. What are Arrays, Functions and Objects?
 Q5. What is Scope in JavaScript?
+Q6. What is the difference between var, let, and const in JavaScript?
+Q7. What is a Loop? What are the types of loops in JavaScript?
+Q8. Difference between for, while, and do-while loop?
+Q9. Difference between for...of and for...in loop
+Q10. What is forEach() method? Compare it with for...of and for...in.
+Q11. Difference between == and === in JavaScript?
 
 Q1. What is JavaScript?
 -------------------------
