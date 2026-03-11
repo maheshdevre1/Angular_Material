@@ -9,6 +9,13 @@ Q8. Difference between for, while, and do-while loop?
 Q9. Difference between for...of and for...in loop
 Q10. What is forEach() method? Compare it with for...of and for...in.
 Q11. Difference between == and === in JavaScript?
+Q12. What are the types of functions in JavaScript? What are named and anonymous functions?
+Q13. What is Function Expression in JavaScript?
+Q14. What are Arrow Functions in JavaScript?
+Q15. What are Callback Functions?
+Q16. When to use Callback Functions in real applications?
+Q17. What is the use of Event Handling in JavaScript?
+Q18. What is a Higher-order Function?
 
 Q1. What is JavaScript?
 -------------------------
@@ -281,3 +288,132 @@ Number ≠ String
 ==   → checks value
 ===  → checks value + datatype
 Most developers prefer ===.
+
+Q12. What are the types of functions in JavaScript? What are named and anonymous functions?
+------------------------------------------------------------------------------------------
+JavaScript has different types of functions.
+Common types of functions
+Named Function
+Anonymous Function
+Function Expression
+Arrow Function
+Callback Function
+Higher-order Function
+Named Function
+A named function has a function name.
+Example
+function greet() {
+  console.log("Hello Mahesh");
+}
+greet();
+Output
+Hello Mahesh
+Here greet is the function name.
+Anonymous Function
+An anonymous function does not have a name.
+Usually used inside variables or callbacks.
+Example
+let sayHello = function() {
+  console.log("Hello");
+};
+sayHello();
+Here the function has no name.
+Q13. What is Function Expression in JavaScript?
+------------------------------------------------
+A function expression means storing a function inside a variable.
+Example
+let add = function(a, b) {
+  return a + b;
+};
+console.log(add(5,3));
+Output
+8
+Here the function is assigned to variable add.
+Q14. What are Arrow Functions in JavaScript?
+---------------------------------------------
+Arrow functions are a short and modern way to write functions.
+They use the => arrow symbol.
+Normal Function
+function add(a,b){
+  return a + b;
+}
+Arrow Function
+const add = (a,b) => {
+  return a + b;
+};
+console.log(add(5,3));
+Output
+8
+Short Arrow Function
+const add = (a,b) => a + b;
+Q15. What are Callback Functions?
+---------------------------------
+A callback function is a function passed as an argument to another function.
+It is called later by another function.
+Example
+function greet(name, callback){
+  console.log("Hello " + name);
+  callback();
+}
+function sayBye(){
+  console.log("Goodbye");
+}
+greet("Mahesh", sayBye);
+Output
+Hello Mahesh
+Goodbye
+Here sayBye is the callback function.
+Q16. When to use Callback Functions in real applications?
+--------------------------------------------------------------
+Callbacks are used when a task takes time and we want to run another function after it finishes.
+Real Examples
+1️⃣ API calls
+fetch("data.json", function(data){
+   console.log(data);
+});
+2️⃣ Button click events
+button.addEventListener("click", function(){
+  console.log("Button clicked");
+});
+3️⃣ Timer functions
+setTimeout(function(){
+  console.log("Hello after 2 seconds");
+}, 2000);
+Q17. What is the use of Event Handling in JavaScript?
+------------------------------------------------------
+Event handling allows JavaScript to respond to user actions.
+Examples of events:
+Button click
+Mouse hover
+Keyboard press
+Form submit
+Example
+HTML
+<button onclick="showMessage()">Click Me</button>
+JavaScript
+function showMessage(){
+  alert("Button clicked!");
+}
+When the user clicks the button → JavaScript runs the function.
+Q18. What is a Higher-order Function?
+--------------------------------------
+A higher-order function is a function that:
+1️⃣ Takes another function as an argument
+OR
+2️⃣ Returns a function
+Example
+function greet(name){
+  return function(){
+    console.log("Hello " + name);
+  };
+}
+let sayHello = greet("Mahesh");
+sayHello();
+Output
+Hello Mahesh
+Another Example (Array method)
+let numbers = [1,2,3];
+numbers.forEach(function(num){
+  console.log(num);
+});
+Here forEach is a higher-order function because it accepts a function.
