@@ -143,3 +143,141 @@ Variables declared with let or const inside {}
   console.log(city);
 }
 city cannot be used outside the block.
+
+Q6. What is the difference between var, let, and const in JavaScript?
+-----------------------------------------------------------------------
+These are used to declare variables.
+Feature	var =	let	= const
+Re-declare	✅ Allowed =	❌ Not allowed =	❌ Not allowed
+Reassign value 	✅ Yes	= ✅ Yes	= ❌ No
+Scope	Function scope =	Block scope =	Block scope
+Preferred in modern JS	❌ =	✅ =	✅
+1️⃣ var Example
+var name = "Mahesh";
+var name = "Rahul";   // allowed
+console.log(name);
+Output
+Rahul
+2️⃣ let Example
+let age = 25;
+age = 30;   // allowed
+console.log(age);
+Output
+30
+But redeclaration is not allowed:
+let age = 25;
+let age = 30; // Error
+3️⃣ const Example
+const value cannot be changed.
+const city = "Mumbai";
+city = "Delhi"; // Error
+Q7. What is a Loop? What are the types of loops in JavaScript?
+----------------------------------------------------------------
+A loop is used to repeat a block of code multiple times.
+Example: Print numbers from 1 to 5.
+Types of loops in JavaScript
+for loop
+while loop
+do...while loop
+for...in loop
+for...of loop
+Example of loop
+for(let i = 1; i <= 5; i++){
+  console.log(i);
+}
+Output
+1
+2
+3
+4
+5
+Q8. Difference between for, while, and do-while loop
+---------------------------------------------------
+Loop	= Condition Check	= Use
+for	 = Before execution	= When number of iterations is known
+while =	Before execution	= When condition based loop
+do-while =	After execution = 	Runs at least once
+1️⃣ for loop
+for(let i = 1; i <= 3; i++){
+  console.log(i);
+}
+Output
+1
+2
+3
+2️⃣ while loop
+let i = 1;
+while(i <= 3){
+  console.log(i);
+  i++;
+}
+3️⃣ do...while loop
+let i = 1;
+do{
+  console.log(i);
+  i++;
+}while(i <= 3);
+The do-while loop runs at least once even if condition is false.
+Q9. Difference between for...of and for...in loop
+-----------------------------------------------------
+Loop =	Used For =	Returns
+for...of =	Arrays, Strings =	Values
+for...in  = 	Objects =	Keys
+for...of Example
+let fruits = ["Apple", "Mango", "Banana"];
+for(let fruit of fruits){
+  console.log(fruit);
+}
+Output
+Apple
+Mango
+Banana
+for...in Example
+let person = {
+  name: "Mahesh",
+  age: 25
+};
+for(let key in person){
+  console.log(key);
+}
+Output
+name
+age
+Q10. What is forEach() method? Compare it with for...of and for...in.
+----------------------------------------------------------------------------
+forEach() is an array method used to loop through array elements.
+forEach Example
+let numbers = [1,2,3];
+numbers.forEach(function(num){
+  console.log(num);
+});
+Output
+1
+2
+3
+Comparison
+Feature	forEach	for...of	for...in
+Works with array	✅	✅	❌
+Works with object	❌	❌	✅
+Returns value	Element	Element	Key
+Break/Continue	❌ Not allowed	✅ Allowed	✅ Allowed
+Q11. Difference between == and === in JavaScript?
+---------------------------------------------------
+Operator	Name	Checks
+==	Loose equality	Value only
+===	Strict equality	Value + Type
+== Example
+console.log(5 == "5");
+Output
+true
+Because type conversion happens.
+=== Example
+console.log(5 === "5");
+Output
+false
+Because:
+Number ≠ String
+✅ Simple Rule
+==   → checks value
+===  → checks value + datatype
+Most developers prefer ===.
