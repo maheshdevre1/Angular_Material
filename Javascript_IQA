@@ -16,6 +16,13 @@ Q15. What are Callback Functions?
 Q16. When to use Callback Functions in real applications?
 Q17. What is the use of Event Handling in JavaScript?
 Q18. What is a Higher-order Function?
+Q19. What are Asynchronous Operations in JavaScript?
+Q20. What are Promises in JavaScript?\
+Q21. How to implement Promises in JavaScript?
+Q22. When to use Promises in real applications?
+Q23. What are Classes and Objects in JavaScript?
+Q24. What is the purpose of this in JavaScript?
+Q25. What is Hoisting in JavaScript?
 
 Q1. What is JavaScript?
 -------------------------
@@ -417,3 +424,145 @@ numbers.forEach(function(num){
   console.log(num);
 });
 Here forEach is a higher-order function because it accepts a function.
+
+Q19. What are Asynchronous Operations in JavaScript?
+-----------------------------------------------------
+Asynchronous operations are tasks that run in the background without stopping the rest of the program.
+JavaScript does not wait for the task to finish and continues executing other code.
+Example
+Tasks like:
+API calls
+File loading
+Database requests
+Timers
+Example Code
+console.log("Start");
+setTimeout(function(){
+  console.log("This runs after 2 seconds");
+}, 2000);
+console.log("End");
+Output
+Start
+End
+This runs after 2 seconds
+JavaScript does not wait for setTimeout.
+Q20. What are Promises in JavaScript?
+--------------------------------------------
+A Promise is an object that represents the result of an asynchronous operation.
+It tells whether the operation is:
+1️⃣ Pending – still running
+2️⃣ Resolved (Fulfilled) – completed successfully
+3️⃣ Rejected – operation failed
+Promise Example
+let promise = new Promise(function(resolve, reject){
+    let success = true;
+    if(success){
+        resolve("Task completed");
+    }else{
+        reject("Task failed");
+    }
+});
+Q21. How to implement Promises in JavaScript?
+----------------------------------------------
+Promises are handled using:
+.then()
+.catch()
+.finally()
+Example
+let promise = new Promise(function(resolve, reject){
+    resolve("Data received");
+});
+promise
+.then(function(result){
+    console.log(result);
+})
+.catch(function(error){
+    console.log(error);
+});
+Output
+Data received
+Example with reject
+let promise = new Promise(function(resolve, reject){
+    reject("Error occurred");
+});
+promise
+.then(function(result){
+    console.log(result);
+})
+.catch(function(error){
+    console.log(error);
+});
+Output
+Error occurred
+Q22. When to use Promises in real applications?
+------------------------------------------------
+Promises are used when handling asynchronous tasks.
+Common real examples
+1️⃣ API calls
+fetch("https://api.example.com/data")
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.log(error));
+2️⃣ Database requests
+3️⃣ File uploads
+4️⃣ Authentication requests
+Promises help avoid callback hell.
+Q23. What are Classes and Objects in JavaScript?
+-------------------------------------------------
+Object
+An object stores data and behavior together.
+Example
+let person = {
+  name: "Mahesh",
+  age: 25
+};
+console.log(person.name);
+Output
+Mahesh
+Class
+A class is a blueprint used to create objects.
+Example
+class Person {
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+  }
+}
+let p1 = new Person("Mahesh",25);
+console.log(p1.name);
+Output
+Mahesh
+Q24. What is the purpose of this in JavaScript?
+------------------------------------------------
+this refers to the current object that is executing the function.
+Example
+let person = {
+  name: "Mahesh",
+  greet: function(){
+    console.log("Hello " + this.name);
+  }
+};
+person.greet();
+Output
+Hello Mahesh
+Here this.name refers to person.name.
+Q25. What is Hoisting in JavaScript?
+----------------------------------------
+Hoisting means JavaScript moves variable and function declarations to the top of their scope before execution.
+Example
+console.log(a);
+var a = 10;
+Output
+undefined
+Because JavaScript interprets it like this:
+var a;
+console.log(a);
+a = 10;
+Function Hoisting Example
+hello();
+function hello(){
+  console.log("Hello");
+}
+Output
+Hello
+Function declarations are fully hoisted.
