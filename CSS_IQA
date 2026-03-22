@@ -110,3 +110,89 @@ Que 9) What are the 3 Types of CSS Preprocessors?
 2️⃣ LESS
 3️⃣ Stylus
 These preprocessors help developers write cleaner and more maintainable CSS.
+
+Que 10) What is Bootstrap? What are the other 5 responsive design frameworks?
+------------------------------------------------------------------------------
+Bootstrap is a popular front-end framework used to create responsive and mobile-first websites using HTML, CSS, and JavaScript.
+Other 5 responsive frameworks:
+Foundation
+Tailwind CSS
+Bulma
+Materialize CSS
+Semantic UI
+
+Que 11) What are the 5 Advantages of using Bootstrap?
+------------------------------------------------------
+Easy to use and beginner-friendly
+Responsive design (mobile-first)
+Pre-built components (buttons, navbar, etc.)
+Cross-browser compatibility
+Saves development time
+
+Que 12) What are the 2 ways to include Bootstrap framework for your website?
+-----------------------------------------------------------------------------
+CDN (Content Delivery Network)
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+Download files locally
+Download Bootstrap
+Include CSS & JS files in project
+
+Que 13) Explain the Grid System in Bootstrap?
+----------------------------------------------
+Bootstrap grid system is used to create layout using rows and columns.
+It is based on 12 columns
+Uses classes like row, col
+Helps in making responsive layouts
+Example:
+<div class="row">
+  <div class="col-6">Left</div>
+  <div class="col-6">Right</div>
+</div>
+
+Que 14) What is the difference between col-xs, col-sm, col-md, col-lg & col-xl?
+--------------------------------------------------------------------------------
+These classes define layout for different screen sizes:
+Class	Screen Size
+col-xs	Extra small (phones)
+col-sm	Small devices (≥576px)
+col-md	Medium devices (≥768px)
+col-lg	Large devices (≥992px)
+col-xl	Extra large devices (≥1200px)
+👉 Note: col-xs is not used in Bootstrap 4/5
+
+Que 15) What are Bootstrap Components? What are Top 10 bootstrap components?
+----------------------------------------------------------------------------
+Bootstrap components are pre-built UI elements that help in faster development.
+Top 10 components:
+Navbar
+Buttons
+Cards
+Forms
+Alerts
+Modals
+Carousel
+Dropdowns
+Pagination
+Badges
+
+Que 16) What is a Bootstrap Modal component?
+---------------------------------------------
+A Bootstrap Modal is a popup dialog box that appears on top of the page.
+👉 Used for:
+Forms
+Alerts
+Confirmations
+
+Que 17) What is Bootstrap Carousel component?
+---------------------------------------------
+A Bootstrap Carousel is a slideshow component used to display images or content in a rotating manner.
+👉 Used for:
+Image sliders
+Banners
+
+Que 18) Explain the difference between Bootstrap's container & container-fluid?
+-------------------------------------------------------------------------------
+Feature	container	container-fluid
+Width	Fixed width	Full width
+Responsiveness	Changes with screen size	Always 100% width
+Use case	Centered content	Full screen layout
