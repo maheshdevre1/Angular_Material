@@ -1,0 +1,211 @@
+function callFunction(){
+     //console.log(reverseString("mahesh")); // hseham
+     //console.log(isPalindrome("madam")); // true
+     //console.log(findMax([10, 5, 20, 8])); // 20
+     //console.log(removeDuplicates([1,2,2,3,4,4])); // [1,2,3,4]
+     //console.log(charFrequency("hello"));
+     //console.log(bubbleSort([5,3,8,1])); // [1,3,5,8]
+     //console.log(secondLargest([10, 20, 5, 8])); // 10
+     //console.log(findMissing([1,2,4,5], 5)); // 3
+     //console.log(isAnagram("listen", "silent")); // true
+     console.log(moveZeros([0,1,0,3,12])); // [1,3,12,0,0]
+    
+
+
+}
+
+callFunction();
+
+
+// Reverse a String (Without inbuilt methods)
+// ✅Reverse a string without using reverse().
+function reverseString(str) {
+    let result = "";
+    
+    for (let i = str.length - 1; i >= 0; i--) {
+        result = result + str[i];
+    }
+    
+    return result;
+}
+
+// Test
+//console.log(reverseString("mahesh")); // hseham
+
+//*******************************************//
+
+// 2)Check Palindrome
+// Check if a string is palindrome.
+
+function isPalindrome(str) {
+    let left = 0;
+    let right = str.length - 1;
+
+    while (left < right) {
+        if (str[left] !== str[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+
+    return true;
+}
+
+// // Test
+//console.log(isPalindrome("madam")); // true
+
+//*******************************************//
+
+// 🔹 3. Find Largest Number in Array
+// Find the largest number without Math.max().
+
+function findMax(arr) {
+    let max = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+
+    return max;
+}
+
+// // Test
+// console.log(findMax([10, 5, 20, 8])); // 20
+
+
+
+//*******************************************//
+//4. Remove Duplicates from Array
+
+function removeDuplicates(arr) {
+    let result = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        let found = false;
+
+        for (let j = 0; j < result.length; j++) {
+            if (arr[i] === result[j]) {
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            result[result.length] = arr[i];
+        }
+    }
+
+    return result;
+}
+
+//5. Count Frequency of Characters
+
+function charFrequency(str) {
+    let freq = {};
+
+    for (let i = 0; i < str.length; i++) {
+        let ch = str[i];
+
+        if (freq[ch] === undefined) {
+            freq[ch] = 1;
+        } else {
+            freq[ch]++;
+        }
+    }
+
+    return freq;
+}
+
+//6. Sort Array (Bubble Sort)
+
+function bubbleSort(arr) {
+    let n = arr.length;
+
+    for (let i = 0; i < n - 1; i++) {
+        for (let j = 0; j < n - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+
+    return arr;
+}
+
+//7. Find Second Largest Number
+
+function secondLargest(arr) {
+    let first = -Infinity;
+    let second = -Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > first) {
+            second = first;
+            first = arr[i];
+        } else if (arr[i] > second && arr[i] !== first) {
+            second = arr[i];
+        }
+    }
+
+    return second;
+}
+
+//Find missing number from 1 to N.
+
+function findMissing(arr, n) {
+    let total = (n * (n + 1)) / 2;
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+
+    return total - sum;
+}
+
+
+//Check if two strings are anagrams (no sort).
+function isAnagram(str1, str2) {
+    if (str1.length !== str2.length) return false;
+
+    let count = {};
+
+    for (let i = 0; i < str1.length; i++) {
+        let ch = str1[i];
+        count[ch] = (count[ch] || 0) + 1;
+    }
+
+    for (let i = 0; i < str2.length; i++) {
+        let ch = str2[i];
+        if (!count[ch]) return false;
+        count[ch]--;
+    }
+
+    return true;
+}
+
+//Move all zeros to end without changing order.
+
+function moveZeros(arr) {
+    let index = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+            let temp = arr[index];
+            arr[index] = arr[i];
+            arr[i] = temp;
+            index++;
+        }
+    }
+
+    return arr;
+}
+
+// Test
+
+
