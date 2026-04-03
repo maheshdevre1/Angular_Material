@@ -2,3 +2,17 @@ Que 1) Explain the importance of NPM and Node_Modules folder ?
 Que 2) Explain the importance of Package.json file in Angular ?
 Que 3)What is typescript and why do we need it ?
 Que 4) What are Annotationa or MetaData ?
+
+👉 “How will you implement dependent dropdowns (State → City) using Angular and API?”
+---------------------------------------------------------------------------------------
+✅ Perfect Interview Answer (Structured)
+👉 Start like this:
+“First, I will create two APIs — one to fetch states and another to fetch cities based on stateId.”
+👉 Then explain flow:
+*“On component load (ngOnInit), I will call the state API and bind the data to the state dropdown using ngFor.”
+👉 Then explain dependency:
+“When the user selects a state, I will capture the stateId using the change event or reactive form valueChanges.”
+👉 Then API call:
+“Based on the selected stateId, I will call the city API and populate the city dropdown dynamically.”
+👉 Then add best practice:
+“I will also reset the city dropdown when the state changes to avoid showing old data.”
