@@ -90,6 +90,14 @@ explain 5 rxjs operator
 How we can handle common error handling
 purpose of trackby in ngFor
 what is generic
+use of angular.json file
+what is debouncing
+difference between switchmap and mergedmap
+How to create environment in angular
+ng build and ng build --prod diff
+obj.assign what it will return
+find and filter difference
+slice and splice diff
 
 
 Que 1) Why Client-Side Frameworks Were Introduced?
