@@ -16,3 +16,136 @@ Que 4) What are Annotationa or MetaData ?
 “Based on the selected stateId, I will call the city API and populate the city dropdown dynamically.”
 👉 Then add best practice:
 “I will also reset the city dropdown when the state changes to avoid showing old data.”
+
+1. What is @ViewChild?
+Used to access a child component / DOM element inside a parent component.
+Example: accessing an input box or child component methods.
+👉 Simple: Parent component se child ko control karna
+@ViewChild('inputRef') input: ElementRef;
+2. State → City dropdown (dependent dropdown)
+👉 Flow:
+Call API to get states
+When state selected → call city API
+Update city dropdown
+onStateChange(stateId) {
+  this.api.getCities(stateId).subscribe(res => {
+    this.cities = res;
+  });
+}
+👉 HTML:
+<select (change)="onStateChange($event.target.value)">
+<select>
+<select>
+  <option *ngFor="let city of cities">{{city.name}}</option>
+</select>
+3. New things (Angular 10 → 16)
+👉 Important ones:
+Standalone Components (Angular 14+) → No need of NgModule
+Signals (Angular 16) → New reactive state system
+Improved performance & strict typing
+Optional inject() function
+Better RxJS handling
+4. Reactive Form
+👉 Form created in TS (not HTML)
+form = new FormGroup({
+  name: new FormControl(''),
+  email: new FormControl('')
+});
+👉 HTML:
+<form [formGroup]="form">
+  <input formControlName="name">
+</form>
+5. What is constant file?
+File where we store fixed values
+Example: API URLs, messages
+export const API_URL = 'http://example.com';
+6. constructor vs ngOnInit()
+constructor	ngOnInit
+Runs first	Runs after constructor
+Used for DI (dependency injection)	Used for logic/API calls
+No lifecycle	Lifecycle hook
+👉 Simple: constructor = setup, ngOnInit = logic
+7. Subject vs BehaviorSubject vs ReplaySubject
+Type	Behavior
+Subject	No previous value
+BehaviorSubject	Holds latest value
+ReplaySubject	Stores multiple old values
+👉 Example:
+BehaviorSubject → always gives last value to new subscriber
+8. What is async pipe?
+Automatically subscribes & unsubscribes observable
+{{ data$ | async }}
+👉 No need to manually subscribe
+9. 5 RxJS operators (simple)
+map() → modify data
+filter() → filter values
+switchMap() → cancel previous API call
+mergeMap() → run multiple API calls
+debounceTime() → delay execution
+10. Common error handling
+👉 Using interceptor (best practice)
+catchError(error => {
+  console.log(error);
+  return throwError(error);
+})
+👉 Or global HTTP interceptor
+11. trackBy in ngFor
+Improves performance
+Avoids re-rendering whole list
+*ngFor="let item of list; trackBy: trackById"
+12. What is generic?
+Allows reusable code
+function getData<T>(data: T): T {
+  return data;
+}
+👉 Works for any type
+13. angular.json file
+Project configuration file
+Contains:
+build settings
+assets
+styles
+environment
+14. What is debouncing?
+Delay API call until user stops typing
+👉 Example: search box
+debounceTime(300)
+15. switchMap vs mergeMap
+switchMap	mergeMap
+Cancels previous call	Runs all calls
+Used in search	Used for parallel calls
+16. Environment in Angular
+Used for different configs (dev, prod)
+environment.ts
+environment.prod.ts
+17. ng build vs ng build --prod
+ng build	ng build --prod
+Dev build	Production build
+Not optimized	Optimized
+Bigger size	Smaller size
+18. Object.assign()
+Object.assign({}, obj1, obj2)
+👉 Returns:
+New object with merged values
+19. find vs filter
+find	filter
+Returns first match	Returns all matches
+Single value	Array
+20. slice vs splice
+slice	splice
+Does not modify array	Modifies original array
+Returns new array	Adds/removes elements
+
+Q1) NPM & node_modules
+Node Package Manager (NPM) → Used to install and manage project libraries.
+node_modules → Folder where all installed packages are stored.
+
+👉 Short answer:
+NPM manages dependencies, and node_modules contains all installed libraries.
+
+Q4) Annotations / Metadata
+Metadata = information about a class
+In Angular, it is written using decorators like @Component
+
+👉 Short answer:
+Annotations (metadata) tell Angular how a class should behave using decorators like @Component.
