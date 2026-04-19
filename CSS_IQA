@@ -208,3 +208,101 @@ Feature	container	container-fluid
 Width	Fixed width	Full width
 Responsiveness	Changes with screen size	Always 100% width
 Use case	Centered content	Full screen layout
+
+
+1. What are position attributes in CSS?
+
+The position property defines how an element is placed on the page.
+
+Types:
+static (default)
+relative
+absolute
+fixed
+sticky
+2. What is Flexbox?
+
+Flexbox (Flexible Box Layout) is a layout system used to align and distribute space among items in a container.
+
+Works in one direction (row or column)
+Makes alignment easy (center, space-between, etc.)
+
+👉 Example:
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+3. Difference between display: none and visibility: hidden
+Feature	display: none	visibility: hidden
+Visible?	❌ No	❌ No
+Space occupied?	❌ No	✅ Yes
+Layout affected?	Yes (removed)	No
+
+👉 Simple:
+
+display: none → removes element completely
+visibility: hidden → hides but keeps space
+4. What is CSS Box Model?
+
+It defines the structure of an element:
+
+6
+Parts:
+Content
+Padding (space inside border)
+Border
+Margin (space outside border)
+5. Difference between padding and margin
+Padding	Margin
+Inside the element	Outside the element
+Affects background	Does NOT affect background
+Space between content & border	Space between elements
+
+👉 Example:
+
+div {
+  padding: 10px;  /* inside */
+  margin: 10px;   /* outside */
+}
+6. What are pseudo classes (you wrote "sudo classes")?
+
+Pseudo-classes define a special state of an element.
+
+👉 Examples:
+
+:hover → when mouse is over
+:active → when clicked
+:focus → when input is selected
+:first-child
+button:hover {
+  background-color: red;
+}
+7. What are semantic and non-semantic elements?
+Semantic elements (meaningful)
+Clearly describe content
+👉 Examples:
+<header>, <footer>, <article>, <section>
+Non-semantic elements
+No meaning
+👉 Examples:
+<div>, <span>
+8. How do we hide an element?
+
+Main ways:
+
+display: none;
+visibility: hidden;
+opacity: 0;
+
+👉 Most common answer (interview):
+display: none
+
+9. Types of position (explained simply)
+5
+static → default, no special positioning
+relative → moves relative to itself
+absolute → moves relative to parent
+fixed → fixed on screen (does not scroll)
+sticky → sticks when scrolling
