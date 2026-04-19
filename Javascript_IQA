@@ -593,3 +593,172 @@ function hello(){
 Output
 Hello
 Function declarations are fully hoisted.
+
+
+===========================================================
+1. What is Event Loop?
+JavaScript is single-threaded, so it can do one task at a time.
+The event loop helps JS handle async tasks (like API calls, timers).
+Flow:
+Code goes to Call Stack
+Async tasks go to Web APIs
+Results go to Callback Queue
+Event loop checks → if stack is empty → pushes task to stack
+👉 Example:
+console.log("Start");
+setTimeout(() => {
+  console.log("Inside Timeout");
+}, 0);
+console.log("End");
+👉 Output:
+Start
+End
+Inside Timeout
+2. Difference between setTimeout and setInterval
+setTimeout	setInterval
+Runs once	Runs repeatedly
+Executes after delay	Executes every interval
+setTimeout(() => console.log("Run once"), 2000);
+setInterval(() => console.log("Run again"), 2000);
+3. What are Closures?
+A closure is when a function remembers variables from its outer scope.
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    console.log(count);
+  }
+}
+const fn = outer();
+fn(); // 1
+fn(); // 2
+👉 inner() remembers count even after outer() finishes.
+4. Deep Copy vs Shallow Copy
+Shallow Copy	Deep Copy
+Copies reference	Copies full data
+Changes affect original	Independent copy
+// Shallow
+let obj1 = { a: 1 };
+let obj2 = obj1;
+// Deep
+let obj3 = JSON.parse(JSON.stringify(obj1));
+5. Difference between map() and reduce()
+map()
+Returns new array
+Used for transformation
+[1,2,3].map(x => x * 2); // [2,4,6]
+reduce()
+Returns single value
+Used for accumulation
+[1,2,3].reduce((sum, val) => sum + val, 0); // 6
+Parameters:
+array.reduce((accumulator, currentValue, index, array) => {}, initialValue)
+6. ES6 Features
+let, const
+Arrow functions =>
+Template literals `Hello ${name}`
+Destructuring
+Spread & Rest
+Classes
+Modules (import/export)
+Promises
+7. Normal Function vs Arrow Function
+Normal Function	Arrow Function
+Has its own this	Uses parent this
+Can be used as constructor	Cannot
+Has arguments object	No arguments
+8. Copy data from one object to another
+let obj1 = { a: 1 };
+// Method 1
+let obj2 = { ...obj1 };
+// Method 2
+let obj3 = Object.assign({}, obj1);
+9. Spread vs Rest Operator
+Spread (...)
+Expands values
+let arr = [1,2];
+let newArr = [...arr, 3];
+Rest (...)
+Collects values
+function sum(...nums) {
+  return nums;
+}
+10. Merge two arrays
+let a = [1,2];
+let b = [3,4];
+let result = [...a, ...b];
+11. Difference between call() and bind()
+call()	bind()
+Calls immediately	Returns function
+Pass args directly	Pass args later
+fn.call(obj, arg1);
+let newFn = fn.bind(obj);
+12. What is NgRx Store?
+NgRx Store is used in Angular for state management.
+Stores application state
+Uses Redux pattern
+Components don’t directly change data
+13. Difference between filter() and find()
+filter()	find()
+Returns array	Returns single value
+All matching items	First match only
+14. Types of Hoisting
+Variable hoisting (var)
+Function hoisting
+👉 Example:
+console.log(a); // undefined
+var a = 10;
+15. Is JavaScript synchronous or asynchronous?
+👉 JavaScript is:
+Synchronous by default
+Asynchronous with help of event loop
+16. Promise & async/await
+Promise
+let p = new Promise((resolve, reject) => {
+  resolve("Done");
+});
+async/await
+async function test() {
+  let res = await p;
+  console.log(res);
+}
+17. Object Prototype
+Every object has a hidden property called [[prototype]].
+👉 Used for inheritance:
+let obj = {};
+console.log(obj.__proto__);
+18. Event Bubbling
+Event goes from child → parent
+div → body → html
+19. map, filter, reduce (summary)
+map → transform
+filter → condition
+reduce → single value
+20. Currying Function
+Function with multiple arguments → converted into multiple functions
+function add(a) {
+  return function(b) {
+    return a + b;
+  }
+}
+add(2)(3); // 5
+21. Object key structure
+let obj = {
+  name: "Mahesh",
+  age: 25
+};
+👉 Key-value pair
+22. for...of vs forEach
+for...of	forEach
+Works on iterable	Works on array
+Can break	Cannot break
+23. Can we apply loop over object?
+👉 Yes:
+for (let key in obj) {
+  console.log(key, obj[key]);
+}
+24. Fetch API vs Axios
+Fetch	Axios
+Built-in	External library
+Need manual JSON	Auto JSON
+No interceptors	Has interceptors
