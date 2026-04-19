@@ -18,14 +18,15 @@ Que 17) What is Bootstrap Carousel component?
 Que 18) Explain the difference between Bootstrap's container & container-fluid?
 
 Live IQA
-What are the position attrribute
-what is flexbox
-differnce between  displaynone and visibility hidden
-CSS box model, difference between padding and margin
-what are sudo classes
-what are sementic and non sementic element
-how do we hide element->display none
-types of position
+1. What are position attributes in CSS?
+2. What is Flexbox?
+3. Difference between display: none and visibility: hidden
+4. What is CSS Box Model?
+5. Difference between padding and margin
+6. What are pseudo classes (you wrote "sudo classes")?
+7. What are semantic and non-semantic elements?
+8. How do we hide an element?
+9. Types of position (explained simply)
 
 
 
